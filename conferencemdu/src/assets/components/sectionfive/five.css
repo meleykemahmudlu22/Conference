@@ -1,0 +1,142 @@
+.organizescontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(0, 60, 255);
+
+  padding: 80px 0;   /* 🔥 section boşluğu */
+  gap: 40px;         /* 🔥 iç elementlər arası boşluq */
+}
+
+/* HEADER */
+.OrganizeseCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 0; /* ❌ silindi */
+  text-align: center;
+}
+
+.OrganizeseCart p:nth-child(1) {
+  color: yellow;
+  font-weight: bold;
+}
+
+.OrganizeseCart p:nth-child(3) {
+  color: rgb(197, 195, 195);
+}
+
+.OrganizeseCart h2 {
+  color: white;
+}
+
+.OrganizeseCart hr {
+  width: 40%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: yellow;
+  border: none;
+}
+
+/* BOTTOM SECTION */
+.OrganizingCartBottom{
+    margin-top: 0; /* ❌ silindi */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* CARDS WRAPPER */
+.cartboxcommon{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;   /* 🔥 responsive fix */
+    justify-content: center;
+}
+
+/* CARD */
+.Cartposter {
+  padding: 20px;
+  background: #0872eb;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+
+  width: 260px; /* 🔥 sabit düzgün ölçü */
+}
+
+/* IMAGE */
+.cartimag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartimag img {
+  object-fit: cover;
+  border-radius: 8px;
+
+  height: 220px;
+  width: 220px;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+/* TEXT AREA */
+.cartposter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+  text-align: center;
+}
+
+.cartposter h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cartposter h2:nth-child(2) {
+  color: yellow;
+  font-size: 16px;
+}
+
+.cartposter p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.cartposter p:nth-child(5) {
+  color: yellow;
+  font-weight: bold;
+}
+
+/* BORDER TEXT */
+.carttextborder {
+  border: 1px solid rgb(19, 35, 255);
+  border-radius: 12px;
+
+  padding: 10px;
+  background: #063fdd;
+}
+
+.carttextborder h2 {
+  color: white;
+}
+
+.carttextborder p {
+  color: rgb(197, 195, 195);
+}

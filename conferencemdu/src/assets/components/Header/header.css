@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.HeaderContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-color:rgb(6, 4, 90);
+}
+.HeaderLogo img{
+    width: 100px;
+    padding: 10p;
+}
+.HeaderNav nav ul  {
+display: flex;
+gap: 10px;
+justify-content: space-evenly;
+color: white;
+}
+.headerbtnnav{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+  align-items: center;
+    gap: 20px;
+}
+.HeaderNav nav ul li  {
+font-size: 20px;
+cursor: pointer;
+list-style-type: none;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.HeaderNav nav ul li:hover  {
+color: rgb(0, 110, 255);
+}
+
+.HeaderNav {
+    
+    width: 60%;
+}
+.HeaderBtn{
+    display: flex;
+    gap: 10px;
+}
+.HeaderBtn button{
+    cursor: pointer;
+    width: 150px;
+    padding: 9px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(0, 110, 255);
+}
+.HeaderBtn button:hover{
+   background-color: rgb(171, 211, 247);
+   color: #000;
+}

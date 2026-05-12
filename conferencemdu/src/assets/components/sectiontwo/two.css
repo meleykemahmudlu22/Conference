@@ -1,0 +1,42 @@
+.sectionTwo{
+    background-color: rgb(2, 32, 131);
+
+    width: 100%;
+    box-sizing: border-box; /* 🔥 scroll fix */
+
+    display: flex;
+    justify-content: center; /* 🔥 space-around YOX */
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    padding: 40px 20px;
+
+    border-top: 2px solid rgb(210, 233, 9);
+
+    overflow-x: hidden; /* 🔥 horizontal scroll fix */
+}
+
+/* BOX */
+.sectionnumber{
+    border-radius: 10px;
+    border: 1px solid goldenrod;
+
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    background-color: white;
+
+    width: 260px;
+    height: 150px;
+
+    box-sizing: border-box; /* 🔥 overflow fix */
+}

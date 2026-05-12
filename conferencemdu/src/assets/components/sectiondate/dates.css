@@ -1,0 +1,49 @@
+.SectionDtes{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 60px 0;
+}
+.DatesLeft{
+    display: flex;
+   gap: 10px;
+}
+
+.logodateone{
+  background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.logodatetwo{
+  background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.logodatetree{
+  background-color: yellow;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.datestext{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.leftcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dateimg img{
+    border-radius: 20px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.leftdatestext h2{
+    font-size: 40px;
+}

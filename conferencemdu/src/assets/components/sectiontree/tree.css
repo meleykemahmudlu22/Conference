@@ -1,0 +1,111 @@
+.sectiontrre{
+    /* margin-top: 10px; */
+    background-color: rgb(110, 10, 94);
+    display: flex;
+    justify-content: space-evenly;
+    height: 140vh;
+    color: white;
+    align-items: center;
+    font: 1em sans-serif;
+}
+.Leftsection{
+    display: flex;
+    flex-direction: column;
+   gap: 30px;
+    width: 700px;
+}
+.Lefttext h2{
+    font-size: 47px;
+}
+.Lefttext p:nth-child(1) {
+    color: yellow;
+}
+.Lefttext p{
+    font-size: 19px;
+}
+.Lefttext{
+    display: flex;
+     flex-direction: column;
+   gap: 30px;
+}
+.Lefttext hr{
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(7, 105, 252);
+}
+
+.LeftCart{
+    display: flex;
+    flex-direction:column ;
+    gap: 20px;
+}
+.lextcarttext{
+    display: flex;
+    
+    padding: 30px;
+    gap: 15px;
+    border-left: 8px solid rgb(0, 47, 255);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+}
+.lextboxtext{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.righttext {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 40px;
+   height: 950px;
+
+}
+
+.rightbox {
+  width: 600px;
+  height: 570px;
+  background: #b807af;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.rightboxtext {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.righttextone {
+  width: 30%;
+  color:yellow;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.righttexttwo {
+  width: 70%;
+  color: #e5e5ff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 15px 0;
+}
+
+
+.highlight {
+
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}

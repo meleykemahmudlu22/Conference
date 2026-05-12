@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.OneText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 600px;
+    /* background-color: aqua; */
+    align-items: center;
+    margin-top: 40px;
+    /* gap: 30px; */
+/* width:200px; */
+}
+.onesection {
+    background-image: url("../images/May\ 1\,\ 2026\,\ 02_30_54\ PM.png");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* align-items: center; */
+}
+.rightbottumtext{
+    position: absolute;
+    top: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    color: white;
+    left: 8px;
+    font-size: 14px;
+}
+.leftbottumtext{
+     position: absolute;
+    top: 800px;
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    color: white;
+    right: 50px;
+}
+.textimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: white;
+}
+.textimg h2{
+    font-size: 30px;
+}
+.Textend h2{
+    font-size: 30px;
+}
+.textimg img{
+  
+    width: 300px;
+}
+.TextLogo img{
+    width: 200px;
+    /* height: 300px; */
+}
+.Textend{
+    color: white;
+}
+.TextLogo{
+    display: flex;
+align-items: center;
+gap: 30px;
+/* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.dateAnim {
+  display: inline-block;
+  animation: floatText 2s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
