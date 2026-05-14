@@ -1,4 +1,5 @@
 import Header from "./assets/components/Header/Header";
+import Commite from "./assets/components/organizing commitee/Commite";
 import SectionDates from "./assets/components/sectiondate/SectionDates";
 import SectionFive from "./assets/components/sectionfive/SectionFive";
 import { SectionFour } from "./assets/components/sectionfour/SectionFour";
@@ -19,6 +20,7 @@ function App(){
     <SectionFive/>
     <SectionVenue/>
     <SectionDates/>
+    <Commite/>
     </>
 
   )

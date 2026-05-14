@@ -1,5 +1,6 @@
 import React from 'react'
 import { SlLocationPin } from "react-icons/sl";
+import image from "../images/MDUlogo (2).png"
 import "./one.css"
 
 export const SectionOne = () => {
@@ -8,12 +9,12 @@ export const SectionOne = () => {
         <div className="onesection">
             <div className="OneText">
                 <div className="textimg">
-                     <img src="https://mdu.edu.az/wp-content/uploads/2026/02/Loqo-7-eng-goy-scaled2026.png" alt="" />
+                     <img src={image} alt="" />
                      <h2>INTERNATONAL SCIENTIFIC CONFERENCE</h2>
                      <h2 className="dateAnim">MAY 18-19,2026</h2>
                 </div>
                 <div className="TextLogo">
-                     <img src="https://mdu.edu.az/wp-content/uploads/2026/02/Loqo-7-eng-goy-scaled2026.png" alt="" />
+                     <img src={image} alt="" />
                     <img src="https://copilot.microsoft.com/th/id/BCO.838217de-d8fa-4468-a23d-f7955e1283de.png" alt="" />
                    
                 </div>
