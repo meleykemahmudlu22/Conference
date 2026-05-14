@@ -1,3 +1,4 @@
+import Deadlines from "./assets/components/Deadlines/Deadlines";
 import Header from "./assets/components/Header/Header";
 import Commite from "./assets/components/organizing commitee/Commite";
 import SectionDates from "./assets/components/sectiondate/SectionDates";
@@ -23,6 +24,7 @@ function App(){
     <SectionDates/>
     <Commite/>
     <SubmissionGuidelines/>
+    <Deadlines/>
     </>
 
   )

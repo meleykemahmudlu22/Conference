@@ -1,0 +1,118 @@
+.deadlinecontainer{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    align-items: center;
+    padding: 60px 0;
+}
+.containerbox{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.deadlinetext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+.calendaricon{
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+    color: navy;
+    align-items: center;
+}
+.deadlineparagrap p{
+    font-size: 20px;
+    color: rgb(11, 11, 202);
+}
+.facalendaricon{
+    font-size: 35px;
+}
+.deadlineboxcontainerone{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.deadlineboxcontainertwo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.deadlineboxcontainerfour h4{
+    color: red;
+}
+.deadlineboxcontainerone h4{
+    color: navy;
+}
+.deadlineboxcontainertwo h4{
+    color: green;
+}
+.deadlineboxcontainertree h4{
+    color: yellow;
+}
+.deadlineboxcontainertree{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.deadlineboxcontainerfour{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.boxfullcontainer{
+    display: flex;
+    gap: 40px;
+}
+.deadlineicontwo{
+    color:green;
+    font-size: 40px;
+}
+.deadlineiconone{
+    color: navy;
+    font-size: 40px;
+}
+.deadlineicontree{
+    color: yellow;
+    font-size: 40px;
+}
+.deadlineiconfour{
+    color: red;
+    font-size: 30px;
+}
+.boxfullcontainer:nth-child(1) h4{
+color: blueviolet;
+}
