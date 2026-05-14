@@ -7,6 +7,7 @@ import { SectionOne } from "./assets/components/SectionOne/SectionOne";
 import { Sectiontree } from "./assets/components/sectiontree/Section";
 import { SectionTwo } from "./assets/components/sectiontwo/SectionTwo";
 import SectionVenue from "./assets/components/sectionvenue/SectionVenue";
+import SubmissionGuidelines from "./assets/components/Submission Guidelines/SubmissionGuidelines";
 
 
 function App(){
@@ -21,6 +22,7 @@ function App(){
     <SectionVenue/>
     <SectionDates/>
     <Commite/>
+    <SubmissionGuidelines/>
     </>
 
   )

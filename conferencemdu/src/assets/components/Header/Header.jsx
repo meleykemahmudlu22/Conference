@@ -1,10 +1,11 @@
+import image from "../images/MDUlogo (2).png"
 import "./header.css"
 function Header (){
     return(
         <>
      <div className="HeaderContainer">
         <div className="HeaderLogo">
-            <img src="https://logo.com/image-cdn/images/kts928pd/production/79922eaa49ddfcff1aa917be52e53d02a8abeb7d-365x374.png?w=1080&q=72&fm=webp" alt="" />
+            <img src={image} alt="" />
         </div>
        <div className="headerbtnnav">
          <div className="HeaderNav">
