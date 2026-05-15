@@ -1,3 +1,4 @@
+import ConferenceParticipants from "./assets/components/Conference Participants/ConferenceParticipants";
 import Deadlines from "./assets/components/Deadlines/Deadlines";
 import Header from "./assets/components/Header/Header";
 import Commite from "./assets/components/organizing commitee/Commite";
@@ -25,6 +26,7 @@ function App(){
     <Commite/>
     <SubmissionGuidelines/>
     <Deadlines/>
+    <ConferenceParticipants/>
     </>
 
   )
