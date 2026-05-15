@@ -1,0 +1,82 @@
+.speakerscontainer{
+    background-color: blueviolet;
+    padding: 60px 0;
+}
+
+.speakercontainertext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.Speakerinfocontainer{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px;
+    
+}
+.SpeakerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.Speakerboxtext h2{
+    font-size: 40px;
+    color: navy;
+}
+.Speakerparagraph p{
+    color: rgb(9, 50, 185);
+}
+.microponeicon{
+     font-size: 40px;
+     color: navy;
+}
+.Speakerboxtext{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.microponeicon{
+font-size: 25px;
+}
+.SpeakerInfo{
+    width: 410px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 30px 0;
+}
+.Speakerboximage img{
+width: 300px;
+}
+.SpeakerName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+.Speakerwork{
+    display: flex;
+    gap: 8px;
+}
+.topic button{
+    padding: 6px 26px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+  
+    background-color: rgb(228, 240, 241);
+}
+.workinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}

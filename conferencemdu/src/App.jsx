@@ -1,6 +1,7 @@
 import ConferenceParticipants from "./assets/components/Conference Participants/ConferenceParticipants";
 import Deadlines from "./assets/components/Deadlines/Deadlines";
 import Header from "./assets/components/Header/Header";
+import KeynoteSpeakers from "./assets/components/Keynote Speakers/KeynoteSpeakers";
 import Commite from "./assets/components/organizing commitee/Commite";
 import SectionDates from "./assets/components/sectiondate/SectionDates";
 import SectionFive from "./assets/components/sectionfive/SectionFive";
@@ -27,6 +28,7 @@ function App(){
     <SubmissionGuidelines/>
     <Deadlines/>
     <ConferenceParticipants/>
+    <KeynoteSpeakers/>
     </>
 
   )
