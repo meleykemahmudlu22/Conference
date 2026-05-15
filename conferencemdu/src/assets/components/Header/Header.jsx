@@ -1,4 +1,5 @@
 import image from "../images/MDUlogo (2).png"
+import {Link} from "react-scroll"
 import "./header.css"
 function Header (){
     return(
@@ -12,7 +13,9 @@ function Header (){
             <nav>
                 <ul>
                     <li>Home</li>
-                    <li>Conference</li>
+
+                     <Link to="conferencevenu" smooth={true} duraction={200} >Conference</Link>
+                    
                     <li>Submission</li>
                     <li>Participate</li>
                     <li>Contact</li>
