@@ -29,7 +29,8 @@ function Header (){
        
         <div className="HeaderBtn">
          
-            <button>Login</button>
+         
+               <RouterLink to="/login">   <button>Login</button></RouterLink>
                <RouterLink to="/register">  <button>Register</button></RouterLink>
           
         </div>

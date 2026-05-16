@@ -15,6 +15,7 @@
 import {  Routes, Route } from "react-router-dom";
 import Home from "./assets/Home/Home/Home";
 import Register from "./assets/pages/Register/Register";
+import Login from "./assets/pages/Login/Login";
 
 
 function App(){
@@ -23,6 +24,7 @@ function App(){
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/login" element={<Login/>}/>
     </Routes>
    
     
