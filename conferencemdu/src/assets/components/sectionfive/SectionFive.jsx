@@ -1,7 +1,7 @@
 import React from 'react'
 import "./five.css"
 
-const SectionFive = () => {
+function SectionFive  () {
   return (
     <div className="organizescontainer">
       <div className="OrganizeseCart">

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./four.css"
-export const SectionFour = () => {
+function SectionFour  ()  {
   return (
     <div>
         <div className="Cartsection">
@@ -247,3 +247,4 @@ export const SectionFour = () => {
     </div>
   )
 }
+export default SectionFour

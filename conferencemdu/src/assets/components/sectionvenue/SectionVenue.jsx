@@ -4,7 +4,7 @@ import { FaMap } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import "./venue.css"
 
-const SectionVenue = () => {
+function SectionVenue (){
   return (
     <div id="conferencevenu"  className="VenueCartcontainer">
       <div className="VenueCart">

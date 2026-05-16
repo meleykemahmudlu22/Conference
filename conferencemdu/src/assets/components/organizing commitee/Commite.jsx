@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaMap } from "react-icons/fa";
 import "./commite.css"
 
-const Commite = () => {
+function Commite  ()  {
     
   const handleCopy = () => {
     navigator.clipboard.writeText("+994501234567");

@@ -6,7 +6,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { FaCalendarDay } from "react-icons/fa";
 import "./Deadlines.css"
 
-const Deadlines = () => {
+function Deadlines  ()  {
   return (
     <div>
       <div className="deadlinecontainer">

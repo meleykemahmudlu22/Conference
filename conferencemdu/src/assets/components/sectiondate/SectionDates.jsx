@@ -4,7 +4,7 @@ import { FaUserCheck } from "react-icons/fa";
 import { FaCalendar } from "react-icons/fa";
 import "./dates.css"
 
-const SectionDates = () => {
+function SectionDates () {
   return (
     <div>
       <div className="SectionDtes">

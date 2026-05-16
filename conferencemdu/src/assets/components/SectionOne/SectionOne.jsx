@@ -3,7 +3,7 @@ import { SlLocationPin } from "react-icons/sl";
 import image from "../images/MDUlogo (2).png"
 import "./one.css"
 
-export const SectionOne = () => {
+function SectionOne () {
   return (
     <div>
         <div className="onesection">
@@ -38,3 +38,4 @@ export const SectionOne = () => {
     </div>
   )
 }
+export default SectionOne

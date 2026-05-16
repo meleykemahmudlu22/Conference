@@ -5,7 +5,7 @@ import { LuTableOfContents } from "react-icons/lu";
 import { IoDocumentText } from "react-icons/io5";
 import { CgDanger } from "react-icons/cg";
 import "./Submission.css"
-const SubmissionGuidelines = () => {
+function SubmissionGuidelines  ()  {
   return (
     <div>
       <div className="submissioncontainer">

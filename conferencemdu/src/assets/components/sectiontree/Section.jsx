@@ -4,7 +4,7 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { ImBooks } from "react-icons/im";
 import "./tree.css"
 
-export const Sectiontree = () => {
+function Sectiontree  ()  {
   return (
     <div>
         <div className="sectiontrre">
@@ -135,3 +135,5 @@ export const Sectiontree = () => {
     </div>
   )
 }
+
+export default Sectiontree

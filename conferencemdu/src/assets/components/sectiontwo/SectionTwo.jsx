@@ -1,7 +1,7 @@
 import React from 'react'
 import "./two.css"
 
-export const SectionTwo = () => {
+function SectionTwo ()  {
   return (
     <div className='containers'>
         {/* <hr /> */}
@@ -27,3 +27,4 @@ export const SectionTwo = () => {
     </div>
   )
 }
+export default SectionTwo

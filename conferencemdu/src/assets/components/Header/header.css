@@ -57,4 +57,7 @@ color: rgb(0, 110, 255);
 .HeaderBtn button:hover{
    background-color: rgb(171, 211, 247);
    color: #000;
+} 
+.HeaderNav  a{
+    text-decoration: none;
 }

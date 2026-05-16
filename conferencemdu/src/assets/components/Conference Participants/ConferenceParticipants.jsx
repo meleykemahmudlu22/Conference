@@ -3,7 +3,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { FaUniversity } from "react-icons/fa";
 import "./Participants.css"
 
-const ConferenceParticipants = () => {
+function ConferenceParticipants  () {
   return (
     <div>
         <div className="participantscontainer">

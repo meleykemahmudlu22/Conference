@@ -1,6 +1,9 @@
 import image from "../images/MDUlogo (2).png"
-import {Link} from "react-scroll"
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+
 import "./header.css"
+
 function Header (){
     return(
         <>
@@ -12,10 +15,11 @@ function Header (){
          <div className="HeaderNav">
             <nav>
                 <ul>
-                    <li>Home</li>
-
-                     <Link to="conferencevenu" smooth={true} duraction={200} >Conference</Link>
-                    
+                <RouterLink to="/">
+                  Home
+                </RouterLink>
+                  
+                     <ScrollLink to="conferencevenu" smooth={true} duraction={200} >Conference</ScrollLink>
                     <li>Submission</li>
                     <li>Participate</li>
                     <li>Contact</li>
@@ -24,8 +28,10 @@ function Header (){
         </div>
        
         <div className="HeaderBtn">
+         
             <button>Login</button>
-            <button>Register</button>
+               <RouterLink to="/register">  <button>Register</button></RouterLink>
+          
         </div>
        </div>
      </div>

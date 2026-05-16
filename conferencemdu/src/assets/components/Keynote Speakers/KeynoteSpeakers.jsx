@@ -3,7 +3,7 @@ import { FaMicrophone } from "react-icons/fa";
 import { FaUniversity } from "react-icons/fa";
 import "./KeynoteSpeakers.css"
 
-const KeynoteSpeakers = () => {
+function KeynoteSpeakers  ()  {
   return (
     <div>
       <div className="speakerscontainer">

@@ -1,0 +1,72 @@
+.registercontainer{
+    background-color: rgb(43, 107, 226);
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+form{
+    background-color: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    align-items: center;
+   
+}
+.forumtext h2{
+    text-align: center;
+}
+.inputlabel{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+     
+   
+}
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.emailiconform {
+  position: absolute;
+  left: 10px;
+  color: #667eea;
+  font-size: 20px;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputWrapper input:focus {
+  border-color: #667eea;
+}
+.foruminput{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.forumbtn button{
+    width: 400px;
+    padding: 12px;
+    border-radius: 7px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
