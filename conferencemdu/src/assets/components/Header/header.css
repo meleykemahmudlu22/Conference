@@ -1,49 +1,66 @@
+:root {
+  --purple-50: #f3e8ff;   
+  --purple-100: #e9d5ff;  
+  --purple-300: #c084fc;  
+  --purple-500: #9333ea;  
+  --purple-700: #6d28d9;  
+  --purple-900: #4c1d95;  
+}
+
 *{
     padding: 0;
     margin: 0;
 }
+
 .HeaderContainer{
     display: flex;
     justify-content: space-between;
     padding: 10px;
     align-items: center;
-    background-color:rgb(6, 4, 90);
+    background-color: #12113a; 
 }
+
 .HeaderLogo img{
     width: 100px;
-    padding: 10p;
+    padding: 10px;
 }
-.HeaderNav nav ul  {
-display: flex;
-gap: 10px;
-justify-content: space-evenly;
-color: white;
+
+.HeaderNav nav ul {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    color: var(--purple-50); 
 }
+
 .headerbtnnav{
     display: flex;
     width: 60%;
     justify-content: space-evenly;
-  align-items: center;
+    align-items: center;
     gap: 20px;
 }
-.HeaderNav nav ul li  {
-font-size: 20px;
-cursor: pointer;
-list-style-type: none;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+.HeaderNav nav ul li {
+    font-size: 20px;
+    cursor: pointer;
+    list-style-type: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.3s;
 }
-.HeaderNav nav ul li:hover  {
-color: rgb(0, 110, 255);
+
+.HeaderNav nav ul li:hover {
+    color: var(--purple-300); 
 }
 
 .HeaderNav {
-    
     width: 60%;
 }
+
 .HeaderBtn{
     display: flex;
     gap: 10px;
 }
+
 .HeaderBtn button{
     cursor: pointer;
     width: 150px;
@@ -52,12 +69,15 @@ color: rgb(0, 110, 255);
     border: none;
     color: white;
     font-size: 20px;
-    background-color: rgb(0, 110, 255);
+    background-color: var(--purple-500); 
+    transition: 0.3s;
 }
+
 .HeaderBtn button:hover{
-   background-color: rgb(171, 211, 247);
-   color: #000;
-} 
-.HeaderNav  a{
+   background-color: var(--purple-300); 
+   color: #000; 
+}
+
+.HeaderNav a{
     text-decoration: none;
 }

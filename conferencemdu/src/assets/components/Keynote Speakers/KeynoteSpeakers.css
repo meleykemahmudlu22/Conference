@@ -1,5 +1,5 @@
 .speakerscontainer{
-    background-color: blueviolet;
+    background-color: #12113a;
     padding: 60px 0;
 }
 
@@ -25,14 +25,14 @@
 }
 .Speakerboxtext h2{
     font-size: 40px;
-    color: navy;
+    color:white;
 }
 .Speakerparagraph p{
     color: rgb(9, 50, 185);
 }
 .microponeicon{
-     font-size: 40px;
-     color: navy;
+     font-size: 45px;
+     color: #f07030;
 }
 .Speakerboxtext{
     display: flex;
@@ -44,7 +44,10 @@ font-size: 25px;
 }
 .SpeakerInfo{
     width: 410px;
-    background-color: white;
+    background:#36339c; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,6 +55,18 @@ font-size: 25px;
     gap: 30px;
     border-radius: 10px;
     padding: 30px 0;
+}
+.SpeakerName h2{
+    color: white;
+}
+.country p{
+    color: #f07030;
+}
+.workinfo p{
+    color: white;
+}
+.SpeakerName  p{
+    color: #f07030;
 }
 .Speakerboximage img{
 width: 300px;
@@ -67,16 +82,22 @@ width: 300px;
     gap: 8px;
 }
 .topic button{
-    padding: 6px 26px;
+    padding: 6.7px 26px;
     border-radius: 10px;
     border: none;
-    font-size: 18px;
-  
-    background-color: rgb(228, 240, 241);
+    font-size: 15px;
+  color: white;
+    background-color: #231f7c;
 }
 .workinfo{
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
+}
+.Speakerparagraph p{
+    color: #9090b0;
+}
+.uniiconwor{
+    color: #f07030;
 }

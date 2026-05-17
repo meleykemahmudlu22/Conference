@@ -5,41 +5,47 @@
     align-items: center;
     gap: 20px;
     padding-top: 30px;
-   color: navy;
     padding-bottom: 10px;
+    color: #6d28d9; 
 }
+
 .venutexticont{
     display: flex;
     align-items: center;
     gap: 7px;
 }
+
 .venutexticont h2{
     font-size: 35px;
+    color:white; 
 }
+
 .venuicone{
     font-size: 30px;
-    color: red;
+    color: #f07030; 
 }
 
 .Venuetext hr{
     width: 50%;
-    height: 2px;
+    height: 2.8px;
     border: none;
     border-radius: 10px;
-    background-color: yellow;
+     background: linear-gradient(
+  90deg, 
+  rgb(184, 121, 6),       
+  #902ff8,       
+  #4b12a8        
+);
 }
-
 
 .VenueCartcontainer{
     padding: 70px 0; 
-    background-color: rgb(4, 4, 180);
-
+background-color:#12113a;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px; 
 }
-
 
 .VenueCart{
     display: flex;
@@ -49,27 +55,23 @@
     gap: 40px;
 }
 
-
 .VenueCartBox{
-    border: 1px solid rgb(11, 51, 230);
-
+  
     width: 600px;
     max-width: 90%; 
     height: auto;   
-
     display: flex;
     flex-direction: column;
-
-    color: white;
-
+    color: #f5f5f5; 
     padding: 30px;
     gap: 20px;
-
     border-radius: 10px;
-    background-color: navy;
-
-   
+    background:#201e61; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
 }
+
 .locationbtn button{
     width:350px;
     padding: 15px;
@@ -81,14 +83,23 @@
     justify-content: center;
     gap: 7px;
     font-size: 16px;
+    background-color: #f07030;
+    color:white;
+    transition: 0.3s;
 }
+
+.locationbtn button:hover{
+    background-color: #f18b57; 
+    color: #fff;
+}
+
 .locationmap{
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 20px;
+    color:#9090b0;
 }
-
 
 .unitext{
     display: flex;
@@ -109,11 +120,14 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    
 }
+
 .unitexticon h2{
      font-size: 33px;
+     color: #ffffff; 
 }
+
 .unicitylocation{
    font-size: 37px;
+  color: #f07030;
 }

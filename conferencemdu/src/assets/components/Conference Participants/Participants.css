@@ -1,5 +1,5 @@
 .participantscontainer{
-    background-color: brown;
+    background-color: #1a1950;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,13 @@
     font-size: 30px;
 }
 .participantsicon h2{
-    color: navy;
+    color: white;
+}
+.participantbox h4{
+    color: white;
+}
+.participantbox{
+    color: #9090b0;
 }
 
 .participantstext{
@@ -36,11 +42,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background:#201e61; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
     width: 360px;
     padding: 20px;
     gap: 10px;
-    /* font-size: 20px; */
     border-radius: 10px;
 }
 .participantbox:nth-child(1) .participanttexticon,.participantbox:nth-child(1) h2{
@@ -61,10 +69,10 @@
 }
 .participantboxicon{
     font-size: 40px;
-    color: navy;
+    color: #f07030;
 }
 .participantsparagrap p{
-    color: rgb(4, 4, 165);
+    color: #9090b0;
 }
 .participanttexticon{
     font-size: 50px;

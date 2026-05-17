@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --purple: #f2e8fc;
+  --turquoise: #1f065c;
+  --gold: #FFD700;
+  --orange: #FF7F50;
+  --green: #4CAF50;
+  --neutral: #6e056e;
+  --pink: #E91E63;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* SECTION */
+
 .Cartsection{
      display: flex;
      flex-direction: column;
      align-items: center;
      padding: 80px 0;
-     background-color: rgb(3, 52, 156);
-
-     gap: 40px; /* 🔥 əsas fix */
+     background-color: #12113a;
+     gap: 40px;
 }
 
-/* TEXT */
+
 .CartText{
     display: flex;
     flex-direction: column;
@@ -27,13 +36,13 @@ body {
 }
 
 .CartText p:nth-child(1){
-    color: yellow;
+    color: #f07030;
     font-size: 18px;
     font-weight: 500;
 }
 
 .CartText p:nth-child(3){
-    color: rgb(199, 197, 197);
+    color: #9090b0;
     font-size: 18px;
     font-weight: 300;
     max-width: 600px;
@@ -42,7 +51,7 @@ body {
 }
 
 .CartText h2{
-    color: white;
+    color:white;
     font-size: 34px;
     font-weight: 600;
     text-align: center;
@@ -50,20 +59,25 @@ body {
 
 .CartText hr{
     width: 120px;
-    height: 2px;
+    height: 2.8px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(217, 255, 0);
+    background: linear-gradient(
+  90deg, 
+  rgb(184, 121, 6),       
+  #902ff8,       
+  #4b12a8        
+);
 }
 
-/* BOX CONTAINER */
+
 .CartBoxContainer{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* ROWS */
+
 .CartBoxTop,
 .CartBoxBottom{
     display: flex;
@@ -72,48 +86,58 @@ body {
     justify-content: center;
 }
 
-/* BOX */
+
 .CartBox{
     position: relative;
     padding: 18px;
-    border: 1px solid rgb(204, 248, 5);
     display: flex;
     border-radius: 10px;
-
     min-height: 300px;  
     width: 300px;
-
     flex-direction: column;
     gap: 10px;
     cursor: pointer;
-
     overflow: hidden; 
     transition: 0.3s ease;
+    color: white;
+    background: #1a1950; 
+  backdrop-filter: blur(10px); 
+    border: 1px solid #480f50; 
 }
 
-/* hover border */
+
+
+
 .CartBox:hover{
-     border: 2px solid rgb(248, 163, 5);
+    border: 1px solid #e63a2e;
 }
 
-/* top line animation */
+
 .CartBox::before{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 0%;
     height: 3px;
+    width: 0%;
     border-radius: 10px;
-    background: linear-gradient(90deg, yellow, lime, cyan);
-    transition: 0.4s ease;
+   background: linear-gradient(
+  90deg, 
+  rgb(207, 136, 4),       
+  #8525eb,       
+  #4b12a8        
+);
+
+    transition: width 0.4s ease;
+    z-index: 2; 
 }
+
 
 .CartBox:hover::before{
     width: 100%;
 }
 
-/* BOX TEXT */
+
 .boxnav{
     width: 100%;
     display: flex;
@@ -128,18 +152,18 @@ body {
 }
 
 .boxnavone p:nth-child(1){
-    color: yellow;
+    color: #e63a2e;
     font-weight: 500;
     font-size: 14px;
 }
 
 .boxnavone p:nth-child(2){
-    color: rgb(170, 169, 169);
+    color: #9090b0;
     font-size: 15px;
     line-height: 1.4;
 }
 
-/* TOP TEXT */
+
 .boxtexttop{
     display: flex;
     flex-direction: column;
@@ -148,11 +172,12 @@ body {
 
 .boxtexttop p{
     font-weight: 600;
+   
 }
 
 .boxtexttop p:nth-child(1){
-    color: yellow;
-    font-size: 22px;
+    color: #e63a2e;
+    font-size: 30px;
 }
 
 .boxtexttop p:nth-child(2){

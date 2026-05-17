@@ -1,5 +1,5 @@
 .deadlinecontainer{
-    background-color: blueviolet;
+    background-color: #12113a;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,7 @@
 }
 .deadlineparagrap p{
     font-size: 20px;
-    color: rgb(11, 11, 202);
+    color: #9090b0;
 }
 .facalendaricon{
     font-size: 35px;
@@ -37,7 +37,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: white;
+   background:#201e61; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
     width: 300px;
     justify-content: center;
     align-items: center;
@@ -49,7 +52,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: white;
+    background:#201e61; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
     width: 300px;
     justify-content: center;
     align-items: center;
@@ -73,7 +79,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: white;
+    background:#201e61; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
     width: 300px;
     justify-content: center;
     align-items: center;
@@ -85,13 +94,40 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: white;
+    background:#201e61; 
+  backdrop-filter: blur(50px); 
+ 
+    border: 1px solid #480f50; 
     width: 300px;
     justify-content: center;
     align-items: center;
     padding: 20px;
     border-radius: 10px;
     font-size: 20px;
+}
+.deadlineboxcontainerone h3{
+    color: white;
+}
+.deadlineboxcontainertwo h3{
+    color: white;
+}
+.deadlineboxcontainertree h3{
+    color: white;
+}
+.deadlineboxcontainerfour h3{
+    color: white;
+}
+.deadlineboxcontainerone p{
+    color:#9090b0;
+}
+.deadlineboxcontainertwo p{
+   color:#9090b0;
+}
+.deadlineboxcontainertree p{
+   color:#9090b0;
+}
+.deadlineboxcontainerfour p{
+   color:#9090b0;
 }
 .boxfullcontainer{
     display: flex;
@@ -115,4 +151,10 @@
 }
 .boxfullcontainer:nth-child(1) h4{
 color: blueviolet;
+}
+.calendaricon h2{
+    color: white;
+}
+.facalendaricon{
+    color: #f07030;
 }

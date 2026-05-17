@@ -1,22 +1,32 @@
+:root {
+  --purple-50: #f3e8ff;  
+  --purple-100: #e9d5ff;  
+  --purple-300: #c084fc;  
+  --purple-500: #9333ea;  
+  --purple-700: #6d28d9;  
+  --purple-900: #4c1d95;  
+}
+
+
 .sectionTwo{
-    background-color: rgb(2, 32, 131);
+   background-color: var(--purple-900);
 
     width: 100%;
-    box-sizing: border-box; /* 🔥 scroll fix */
+    box-sizing: border-box; 
 
     display: flex;
-    justify-content: center; /* 🔥 space-around YOX */
+    justify-content: center; 
     align-items: center;
 
     flex-wrap: wrap;
 
     gap: 20px;
 
-    padding: 40px 20px;
+    padding: 60px 0px;
 
     border-top: 2px solid rgb(210, 233, 9);
 
-    overflow-x: hidden; /* 🔥 horizontal scroll fix */
+    overflow-x: hidden; 
 }
 
 /* BOX */
@@ -38,5 +48,5 @@
     width: 260px;
     height: 150px;
 
-    box-sizing: border-box; /* 🔥 overflow fix */
+    box-sizing: border-box; 
 }

@@ -2,6 +2,7 @@
     display: flex;
     justify-content:space-evenly;
     padding: 60px 0;
+    background-color: #1a1950;
 }
 .DatesLeft{
     display: flex;
@@ -34,6 +35,12 @@
     flex-direction: column;
     gap: 10px;
 }
+.datestext h3{
+    color: white;
+}
+.datestext p{
+    color: #9090b0;
+}
 .leftcontainer{
     display: flex;
     flex-direction: column;
@@ -41,9 +48,10 @@
 }
 .dateimg img{
     border-radius: 20px;
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 8px 25px rgba(204, 101, 4, 0.2);
 }
 
 .leftdatestext h2{
+    color: white;
     font-size: 40px;
 }

@@ -31,7 +31,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -56,7 +56,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -81,7 +81,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -106,7 +106,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -131,7 +131,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -156,7 +156,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -181,7 +181,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
@@ -206,7 +206,7 @@ function KeynoteSpeakers  ()  {
                 </div>
                 <div className="Speakerwork">
                     <div className="workicon">
-                      <FaUniversity/>
+                      <FaUniversity className='uniiconwor'/>
                     </div>
                     <div className="workinfo">
                         <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>

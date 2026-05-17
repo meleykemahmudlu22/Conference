@@ -1,5 +1,5 @@
 .Commitecontainer{
-    background-color: brown;
+    background-color: #12113a;
     padding: 60px 0;
     display: flex;
     justify-content: center;
@@ -11,12 +11,17 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    background-color: white;
+   background: #1a1950; 
+  backdrop-filter: blur(20px);
     width: 770px;
     padding: 30px;
     height: 400px;
     border-radius: 10px;
+    border: 1px solid #f07030;
 
+}
+.commiteicon h2{
+    color: white;
 }
 .commitetext p{
     color: rgb(167, 166, 166);
