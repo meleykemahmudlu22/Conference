@@ -9,7 +9,7 @@ import "./Deadlines.css"
 function Deadlines  ()  {
   return (
     <div>
-      <div className="deadlinecontainer">
+      <div id='Deadlines' className="deadlinecontainer">
         <div className="containerbox">
             <div className="deadlinetext">
                 <div className="calendaricon">

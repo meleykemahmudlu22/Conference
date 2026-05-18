@@ -12,7 +12,7 @@ function Commite  ()  {
   };
   return (
     <div>
-      <div className="Commitecontainer">
+      <div id='contact' className="Commitecontainer">
         <div className="Commitebox">
             <div className="commiteicon">
                 <h2>Contact the Organizing Committee</h2>

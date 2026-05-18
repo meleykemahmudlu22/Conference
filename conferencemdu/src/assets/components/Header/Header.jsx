@@ -1,10 +1,39 @@
 import image from "../images/MDUlogo (2).png"
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
-
+import { FaArrowUp } from "react-icons/fa";
 import "./header.css"
+import { useEffect, useState } from "react";
 
 function Header (){
+
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
     return(
         <>
      <div className="HeaderContainer">
@@ -19,10 +48,44 @@ function Header (){
                   Home
                 </RouterLink>
                   
-                     <ScrollLink to="conferencevenu" smooth={true} duraction={200} >Conference</ScrollLink>
-                    <li>Submission</li>
-                    <li>Participate</li>
-                    <li>Contact</li>
+                      <li className="dropdown">
+        Conference
+
+        <div className="dropdownMenu">
+          <ScrollLink to="speakerkeynote" smooth={true} duration={300}>
+            Keynote Speaker
+          </ScrollLink>
+
+          <ScrollLink to="contact" smooth={true} duration={200}>
+            Commites
+          </ScrollLink>
+
+          <ScrollLink to="conferencevenu" smooth={true} duration={200}>
+            Venue
+          </ScrollLink>
+          <ScrollLink to="topics" smooth={true} duration={200}>
+                Topics
+          </ScrollLink>
+        </div>
+      </li>
+                    <li className="dropdown">Submission
+                         <div className="dropdownMenu">
+          <ScrollLink to=" Guidlines" smooth={true} duration={200}>
+        Guidlines
+          </ScrollLink>
+
+          <ScrollLink to="Deadlines" smooth={true} duration={200}>
+            Deadlines
+          </ScrollLink>
+
+          
+        </div>
+                    </li>
+                    <ScrollLink to="participant" smooth={true} duraction={200} >Participate</ScrollLink>
+                    <ScrollLink to="contact" smooth={true} duraction={200} >Contact</ScrollLink>
+                    
+                    
+                        
                 </ul>
             </nav>
         </div>
@@ -35,6 +98,13 @@ function Header (){
           
         </div>
        </div>
+       {
+        showButton && (
+          <div className="scrollTop" onClick={scrollTop}>
+            <FaArrowUp />
+          </div>
+        )
+      }
      </div>
         </>
     )

@@ -12,6 +12,7 @@ import SubmissionGuidelines from "../../../assets/components/Submission Guidelin
 import Deadlines from "../../../assets/components/Deadlines/Deadlines";
 import ConferenceParticipants from "../../../assets/components/Conference Participants/ConferenceParticipants";
 import KeynoteSpeakers from "../../../assets/components/Keynote Speakers/KeynoteSpeakers";
+import Footer from '../../components/footer/Footer';
 
 
 
@@ -32,6 +33,7 @@ function Home() {
              < Deadlines />
              < ConferenceParticipants />
              < KeynoteSpeakers />
+             <Footer/>
         </>
     )
 }

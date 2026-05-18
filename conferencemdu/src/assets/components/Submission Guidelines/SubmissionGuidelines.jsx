@@ -8,7 +8,7 @@ import "./Submission.css"
 function SubmissionGuidelines  ()  {
   return (
     <div>
-      <div className="submissioncontainer">
+      <div id=' Guidlines' className="submissioncontainer">
          <div className="GuidelinesBoxText">
             <div className="texticonguidelines">
                  <  FaEdit className='editiconse'/>

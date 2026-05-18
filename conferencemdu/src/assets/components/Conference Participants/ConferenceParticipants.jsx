@@ -6,7 +6,7 @@ import "./Participants.css"
 function ConferenceParticipants  () {
   return (
     <div>
-        <div className="participantscontainer">
+        <div id='participant' className="participantscontainer">
             <div className="conferenceparticipants">
                 <div className="participantstext">
                     <div className="participantsicon">
