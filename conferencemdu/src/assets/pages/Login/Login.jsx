@@ -5,25 +5,70 @@ import { FaUserCircle } from "react-icons/fa";
 import "./login.css"
 import Header from '../../components/Header/Header';
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Login = () => {
-  const [message, setMessage] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
+
+  
+    if (!validateEmail(username)) {
+      Swal.fire({
+        title: "Xəta!",
+        text: "Email formatı düzgün deyil",
+        icon: "error",
+        confirmButtonText: "Bağla"
+      });
+      return;
+    }
+
+
+    if (!password) {
+      Swal.fire({
+        title: "Xəta!",
+        text: "Şifrə boş ola bilməz",
+        icon: "error",
+        confirmButtonText: "Bağla"
+      });
+      return;
+    }
+
     try {
       const { data } = await axios.post("http://localhost:5000/api/auth/login", {
         username,
         password,
       });
-      localStorage.setItem("token", data.token); // token saxlanır
-      setMessage("Login uğurlu oldu!");
-      // Burada yönləndirmə edə bilərsən:
-      window.location.href = "/";
+
+      localStorage.setItem("token", data.token);
+
+      Swal.fire({
+        title: "🎉 Login uğurlu!",
+        text: "Xoş Gəlmisiniz!",
+        icon: "success",
+        confirmButtonText: "Ana səhifəyə keç"
+      }).then(() => {
+       
+        setUsername("");
+        setPassword("");
+      
+        window.location.href = "/";
+      });
+
     } catch (err) {
-      setMessage(err.response?.data?.message || "Xəta baş verdi");
+      Swal.fire({
+        title: "Xəta!",
+        text: err.response?.data?.message || "Login alınmadı",
+        icon: "error",
+        confirmButtonText: "Bağla"
+      });
     }
   };
 
@@ -43,7 +88,7 @@ const Login = () => {
                 <MdEmail className='loginemailicon'/>
                 <input
                   type="text"
-                  placeholder="Username"
+                  placeholder="Email"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
@@ -65,11 +110,10 @@ const Login = () => {
               <button type='submit'>Giriş</button>
             </div>
             <div className="account">
-              <p>Hesabınız yoxdur? <a href="">Buradan Qeydiyyatdan keçin</a></p>
+              <p>Hesabınız yoxdur? <a href="/register">Buradan Qeydiyyatdan keçin</a></p>
             </div>
           </div>
         </form>
-        <p>{message}</p>
       </div>
     </div>
   )
