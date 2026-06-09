@@ -19,7 +19,7 @@ export default function Footer() {
 
       <div className="footerContainer">
 
-        {/* LEFT */}
+     
         <div className="footerBox">
           <h2>⚗ ISFM Konfransı</h2>
 
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* CENTER 1 */}
+    
         <div className="footerBox">
           <h3>Tez Keçidlər</h3>
 
@@ -53,7 +53,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* CENTER 2 */}
         <div className="footerBox">
           <h3>Konfrans Məlumatı</h3>
 
@@ -66,7 +65,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* RIGHT */}
         <div className="footerBox">
           <h3>Əlaqə Məlumatı</h3>
 

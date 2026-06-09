@@ -11,7 +11,11 @@
     padding: 0;
     margin: 0;
 }
-
+.navlink {
+  color: white;  
+  text-decoration: none;
+  padding: 10px;
+}
 .HeaderContainer{
     display: flex;
     justify-content: space-between;
@@ -21,8 +25,13 @@
 }
 
 .HeaderLogo img{
-    width: 100px;
+    width: 90px;
     padding: 10px;
+}
+.HeaderLogo h2{
+    font-size: 30px;
+    padding: 10px;
+    color: white;
 }
 
 .HeaderNav nav ul {

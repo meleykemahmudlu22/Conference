@@ -1,230 +1,85 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { FaMicrophone } from "react-icons/fa";
 import { FaUniversity } from "react-icons/fa";
-import "./KeynoteSpeakers.css"
+import axios from "axios";
+import image from "../images/rektor.jpeg"
+import "./KeynoteSpeakers.css";
 
-function KeynoteSpeakers  ()  {
+function KeynoteSpeakers() {
+  const [speakers, setSpeakers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+
+
+  useEffect(() => {
+    async function fetchSpeakers() {
+      try {
+        const { data } = await axios.get("https://6a1ad52fbc2f94475492b2ec.mockapi.io/parabolasite");
+        setSpeakers(data);
+      } catch (error) {
+        console.error("Speaker məlumatlarını gətirmək mümkün olmadı:", error);
+      }
+    }
+    fetchSpeakers();
+  }, []);
+
+ 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentSpeakers = speakers.slice(indexOfFirstItem, indexOfLastItem);
+
+  const totalPages = Math.ceil(speakers.length / itemsPerPage);
+
   return (
     <div>
-      <div  id='speakerkeynote' className="speakerscontainer">
-        <div className="SpeakerBox">
-            <div className="speakercontainertext">
-                  <div className="Speakerboxtext">
-                <FaMicrophone className='microponeicon'/>
-                <h2>Keynote Speakers</h2>
+      <div id='speakerkeynote' className="speakerscontainer">
+        {/* <div className="SpeakerBox"> */}
+          <div className="speakercontainertext">
+            <div className="Speakerboxtext">
+              <FaMicrophone className='microponeicon'/>
+              <h2>Keynote Speakers</h2>
             </div>
             <div className="Speakerparagraph">
-                <p>Distinguished experts and thought leaders presenting cutting-edge research</p>
+              <p>Distinguished experts and thought leaders presenting cutting-edge research</p>
             </div>
-            </div>
-          
+          </div>
 
-            <div className="Speakerinfocontainer">
-                <div className="SpeakerInfo">
+          <div className="Speakerinfocontainer">
+            {currentSpeakers.map((sp, index) => (
+              <div className="SpeakerInfo" key={index}>
                 <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
+          
+                  <img src={image}  />
                 </div>
                 <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
+                  <h2>{sp.name}</h2>
+                  
+                  <p>{sp.role}</p>
                 </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
+                
                 <div className="country">
-                    <p>Azərbaycan</p>
+                  <p>{sp.title}</p>
                 </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-                <div className="SpeakerInfo">
-                <div className="Speakerboximage">
-                    <img src="https://isfm.beu.edu.az/images/keynote-speakers/1772848981_22222.jpg" alt="" />
-                </div>
-                <div className="SpeakerName">
-                    <h2>Dr. (M.D. PhD. Dr. Med of Sci)</h2>
-                    <h2>Adil M. Allahverdiyev</h2>
-                    <p>Professor</p>
-                </div>
-                <div className="Speakerwork">
-                    <div className="workicon">
-                      <FaUniversity className='uniiconwor'/>
-                    </div>
-                    <div className="workinfo">
-                        <p>V. Axundov adına Elmi-Tədqiqat Tibb</p>
-                        <p>Profilaktika İnstitutunun direktoru</p>
-                    </div>
-                </div>
-                <div className="country">
-                    <p>Azərbaycan</p>
-                </div>
-                <div className="topic">
-                    <button>Ingilis-dili</button>
-                </div>
-            </div>
-            </div>
-        </div>
+                
+              </div>
+            ))}
+          </div>
+
+          <div className="pagination">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentPage(i + 1)}
+                className={currentPage === i + 1 ? "activePage" : ""}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+        {/* </div> */}
       </div>
     </div>
-  )
+  );
 }
 
-export default KeynoteSpeakers
+export default KeynoteSpeakers;

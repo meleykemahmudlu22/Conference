@@ -1,4 +1,4 @@
-import image from "../images/MDUlogo (2).png"
+import image from "../images/cilers logo.png"
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
@@ -38,13 +38,14 @@ function Header (){
         <>
      <div className="HeaderContainer">
         <div className="HeaderLogo">
-            <img src={image} alt="" />
+          <h2>CILERS||2026</h2>
+            {/* <img src={image} alt="" /> */}
         </div>
        <div className="headerbtnnav">
          <div className="HeaderNav">
             <nav>
                 <ul>
-                <RouterLink to="/">
+                <RouterLink to="/" className="navlink">
                   Home
                 </RouterLink>
                   
@@ -53,11 +54,11 @@ function Header (){
 
         <div className="dropdownMenu">
           <ScrollLink to="speakerkeynote" smooth={true} duration={300}>
-            Keynote Speaker
+            Keynote Speakers
           </ScrollLink>
 
           <ScrollLink to="contact" smooth={true} duration={200}>
-            Commites
+            Commite
           </ScrollLink>
 
           <ScrollLink to="conferencevenu" smooth={true} duration={200}>

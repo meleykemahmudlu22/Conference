@@ -35,7 +35,7 @@ const Register = () => {
       return;
     }
 
-    // Password yoxlaması
+   
     if (!validatePassword(password)) {
       Swal.fire({
         title: "Xəta!",

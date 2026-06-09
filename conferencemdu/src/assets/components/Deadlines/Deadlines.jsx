@@ -27,25 +27,25 @@ function Deadlines  ()  {
                < IoDocumentText className='deadlineiconone'/>
                 <h3>Abstract Submission</h3>
                 <p>Deadline</p>
-                <h4>April 5, 2026</h4>
+                <h4>May 1, 2026</h4>
             </div>
             <div className="deadlineboxcontainertwo">
                < FaUserPlus className='deadlineicontwo'  />
-                <h3>boxfullcontainer</h3>
+                <h3>Full Peaper</h3>
                 <p>Deadline</p>
-                <h4>April 5, 2026</h4>
+                <h4>May 1, 2026</h4>
             </div>
             <div className="deadlineboxcontainertree">
                < FaTelegramPlane className='deadlineicontree'  />
-                <h3>ARegistration</h3>
+                <h3>Registration</h3>
                 <p>Deadline</p>
-                <h4>April 5, 2026</h4>
+                <h4>May 1, 2026</h4>
             </div>
             <div className="deadlineboxcontainerfour">
                < FaCalendarDay className='deadlineiconfour'  />
                 <h3>Conference</h3>
                 <p>Deadline</p>
-                <h4>April 5, 2026</h4>
+                <h4>May 18-19, 2026</h4>
             </div>
           </div>
         </div>

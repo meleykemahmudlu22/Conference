@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { SlLocationPin } from "react-icons/sl";
+import images from "../images/cilers logo.png";
 import image from "../images/MDUlogo (2).png";
+import picture from "../images/dokuz eylul.png";
 import Swal from "sweetalert2";
 import { FaFileAlt } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
@@ -10,88 +12,96 @@ import "./one.css";
 function SectionOne() {
   const [file, setFile] = useState(null);
 
-  const handleUpload = async (e) => {
-    e.preventDefault();
+ const handleUpload = async (e) => {
+  e.preventDefault();
 
-    const token = localStorage.getItem("token");
-    if (!token) {
-      Swal.fire({
-        title: "Xəta!",
-        text: "Fayl yükləmək üçün əvvəlcə qeydiyyatdan keçin!",
-        icon: "error",
-        confirmButtonText: "Qeydiyyata keç"
-      }).then(() => {
-        window.location.href = "/register";
-      });
-      return;
-    }
+  // Token yoxlaması
+  const token = localStorage.getItem("token");
+  if (!token) {
+    Swal.fire({
+      title: "Xəta!",
+      text: "Fayl yükləmək üçün əvvəlcə qeydiyyatdan keçin!",
+      icon: "error",
+      confirmButtonText: "Qeydiyyata keç"
+    }).then(() => {
+      window.location.href = "/register"; // 🔹 yönləndirmə
+    });
+    return;
+  }
 
-    if (!file) {
-      Swal.fire({
-        title: "Xəta!",
-        text: "Fayl seçilməyib!",
-        icon: "error",
-        confirmButtonText: "Bağla"
-      });
-      return;
-    }
+  if (!file) {
+    Swal.fire({
+      title: "Xəta!",
+      text: "Fayl seçilməyib!",
+      icon: "error",
+      confirmButtonText: "Bağla"
+    });
+    return;
+  }
 
-    const formData = new FormData();
-    formData.append("abstract", file);
+  const formData = new FormData();
+  formData.append("abstract", file);
 
-    try {
-      const { data } = await axios.post(
-        "http://localhost:5000/api/abstract/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            "Authorization": `Bearer ${token}`,
-          },
-        }
-      );
+  try {
+    const { data } = await axios.post(
+      "http://localhost:5000/api/abstract/upload",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "Authorization": `Bearer ${token}`,
+        },
+      }
+    );
 
-      Swal.fire({
-        title: " Uğurlu!",
-        text: data.message,
-        icon: "success",
-        confirmButtonText: "Əla!"
-      });
+    Swal.fire({
+      title: "🎉 Uğurlu!",
+      text: data.message,
+      icon: "success",
+      confirmButtonText: "Əla!"
+    });
 
-      setFile(null); 
-    } catch (err) {
-      Swal.fire({
-        title: "Xəta!",
-        text: "Login olunmayıb və ya xəta baş verdi",
-        icon: "error",
-        confirmButtonText: "Bağla"
-      });
-    }
-  };
+    setFile(null); 
+  } catch (err) {
+    Swal.fire({
+      title: "Xəta!",
+      text: "Login olunmayıb və ya xəta baş verdi",
+      icon: "error",
+      confirmButtonText: "Bağla"
+    });
+  }
+};
+
   return (
     <div>
       <div className="onesection">
         <div className="OneText">
           <div className="textimg">
-            <img src={image} alt="" />
+            <img src={images} alt="" />
             <h2>INTERNATIONAL SCIENTIFIC CONFERENCE</h2>
             <h2 className="dateAnim">MAY 18-19, 2026</h2>
           </div>
           <div className="TextLogo">
             <img src={image} alt="" />
             <img
-              src="https://copilot.microsoft.com/th/id/BCO.838217de-d8fa-4468-a23d-f7955e1283de.png"
+              src={picture}
               alt=""
             />
           </div>
           <div className="Textend">
-            <h2>
-              "CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"
-            </h2>
+            <div className="textendone">
+              <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
+             
+            </div>
+             <hr />
+            <div className="textendone">
+              <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
+            </div>
+           
            
           </div>
         </div>
-        <div className="download">
+        {/* <div className="download">
          
             <form onSubmit={handleUpload} className="dowunloadform">
               <div className="uploadBtn">
@@ -120,13 +130,14 @@ function SectionOne() {
            
             </button>
               <button type="submit"className="btnUpload">   <FaDownload />Xülasə Yüklə</button>
-              {/* <p>{message}</p> */}
+             
               </div>
              
              
             </form>
-        </div>
-        <div className="rightbottumtext">
+        </div> */}
+        {/* <div className="bottomRow">
+           <div className="rightbottumtext">
           <p>EMAIL: CIER.EDITORIAL@MDU.EDU.AZ</p>
           <p>TEL: (+994 55) 837-01-38 / (+994 50) 836-93-66</p>
         </div>
@@ -134,6 +145,8 @@ function SectionOne() {
           <SlLocationPin />
           <p>Mingachevir, Heydar Aliyev Center</p>
         </div>
+        </div> */}
+       
       </div>
     </div>
   );

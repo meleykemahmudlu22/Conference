@@ -21,32 +21,26 @@ function ConferenceParticipants  () {
                 <div className="conferenceboxflex">
                     <div className="participantbox">
                     <FaUniversity className='participanttexticon' />
-                    <h2>50+</h2>
+                    <h2>77+</h2>
                     <h4>Universities</h4>
                     <p>Leading academic institutions </p>
                     <p>worldwide</p>
                 </div>
                     <div className="participantbox">
                     < FaUniversity className='participanttexticon' />
-                    <h2>25+</h2>
+                    <h2>23</h2>
                     <h4>Countries</h4>
                     <p>Leading academic institutions </p>
                     <p>worldwide</p>
                 </div>
                     <div className="participantbox">
                     < FaUniversity className='participanttexticon' />
-                    <h2>200+</h2>
+                    <h2>545+</h2>
                     <h4>Researchers</h4>
                     <p>Leading academic institutions </p>
                     <p>worldwide</p>
                 </div>
-                    <div className="participantbox">
-                    < FaUniversity className='participanttexticon' />
-                    <h2>30+</h2>
-                    <h4>Companies</h4>
-                    <p>Leading academic institutions </p>
-                    <p>worldwide</p>
-                </div>
+                   
                 </div>
                 
             </div>
