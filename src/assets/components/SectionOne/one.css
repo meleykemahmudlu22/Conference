@@ -1,111 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .onesection {
-  background: linear-gradient(135deg, rgba(11, 12, 22, 0.92) 0%, rgba(26, 21, 59, 0.88) 100%), url("../images/backroundimage.png");
+  background-image: url("../images/backroundimage.png");
+  width: 100%;
+  padding: 80px 0;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 80px 20px;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 
 .OneText {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
   color: white;
   text-align: center;
-  max-width: 900px;
-  width: 100%;
-  z-index: 2;
 }
 
 .textimg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .textimg img {
-  width: 320px;
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 4px 12px rgba(255,255,255,0.1));
+  width: 280px;
 }
 
-.textimg h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  line-height: 1.3;
-  margin-top: 10px;
-  font-family: 'Outfit', 'Inter', sans-serif;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+.textimg h2 {
+  font-size: 25px;
 }
 
 .dateAnim {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #a855f7;
-  font-family: 'Outfit', 'Inter', sans-serif;
-  margin-top: 10px;
-  animation: pulseGlow 2.5s infinite ease-in-out;
-  letter-spacing: 1px;
+  display: inline-block;
+  animation: floatText 2s ease-in-out infinite;
 }
 
 .TextLogo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin: 10px 0;
+  gap: 60px; 
 }
 
 .TextLogo img {
-  height: 80px;
-  width: auto;
-  max-width: 100%;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-  transition: transform 0.3s ease;
+  width: 190px;
 }
-
-.TextLogo img:hover {
-  transform: scale(1.06);
+.TextLogo img:nth-child(1){
+    width: 230px;
 }
-
 .Textend {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
-  width: 100%;
+  gap: 20px;
+  max-width: 830px;
+  margin-top: 20px;
 }
 
-.textendone h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.95);
-  font-family: 'Outfit', 'Inter', sans-serif;
-  max-width: 800px;
+.Textend.textendone h2 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+.Textend hr{
+  width: 700px;
 }
 
-.Textend hr {
-  width: 200px;
-  border: none;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #7c3aed, transparent);
-  margin: 12px 0;
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
+/* Keep the premium button styling */
 .sectionbutton {
   display: flex;
   gap: 20px;
@@ -173,47 +150,27 @@
   transform: translateY(-1px);
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.95;
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-  }
-  50% {
-    transform: scale(1.04);
-    opacity: 1;
-    text-shadow: 0 0 25px rgba(168, 85, 247, 0.75);
-  }
-}
-
-/* Responsiveness */
 @media (max-width: 768px) {
-  .onesection {
-    padding: 60px 15px;
+  .TextLogo {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .textimg h1 {
-    font-size: 1.7rem;
+
+  .textimg h2,
+  .Textend h2 {
+    font-size: 20px;
   }
-  
-  .dateAnim {
-    font-size: 1.3rem;
-  }
-  
+
   .TextLogo img {
-    height: 60px;
+    width: 140px;
   }
-  
-  .textendone h2 {
-    font-size: 1.1rem;
-  }
-  
+
   .cta-btn {
     width: 100%;
     justify-content: center;
     padding: 12px 24px;
   }
-  
+
   .sectionbutton {
     flex-direction: column;
     width: 100%;

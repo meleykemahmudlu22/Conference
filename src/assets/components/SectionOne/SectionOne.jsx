@@ -110,7 +110,7 @@ function SectionOne() {
         <div className="OneText">
           <div className="textimg">
             <img src={images} alt="CILERS Logo" />
-            <h1>INTERNATIONAL SCIENTIFIC CONFERENCE</h1>
+            <h2>INTERNATIONAL SCIENTIFIC CONFERENCE</h2>
             <h2 className="dateAnim">MAY 18-19, 2026</h2>
           </div>
           <div className="TextLogo">
@@ -118,6 +118,10 @@ function SectionOne() {
             <img src={picture} alt="Dokuz Eylul Logo" />
           </div>
           <div className="Textend">
+            <div className="textendone">
+              <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
+            </div>
+            <hr />
             <div className="textendone">
               <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
             </div>
