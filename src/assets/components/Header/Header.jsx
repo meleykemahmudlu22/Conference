@@ -1,6 +1,5 @@
 import { Link as RouterLink } from "react-router-dom";
-import { FaArrowUp } from "react-icons/fa";
-import { FiLogIn, FiUserPlus } from "react-icons/fi";
+import { FiLogIn, FiUserPlus, FiChevronUp } from "react-icons/fi";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import "./header.css"
 import { useEffect, useState } from "react";
@@ -128,7 +127,7 @@ function Header (){
         
         {showButton && (
           <div className="scrollTop" onClick={scrollTop}>
-            <FaArrowUp />
+            <FiChevronUp />
           </div>
         )}
       </div>

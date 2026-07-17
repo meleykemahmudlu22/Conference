@@ -222,33 +222,30 @@ html, body {
     padding-left: 16px;
 }
 
-.scrollTop{
+.scrollTop {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
-    width: 55px;
-    height: 55px;
-    background-color: #7b2cbf;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
     color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
-
+    font-size: 24px;
     z-index: 999;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
-    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(109, 40, 217, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.scrollTop:hover{
-    transform: translateY(-5px);
-    background-color: #9d4edd;
+.scrollTop:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    box-shadow: 0 10px 25px rgba(109, 40, 217, 0.5);
 }
 
 /* Navbar Responsiveness */
