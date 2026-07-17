@@ -1,30 +1,13 @@
 import express from "express";
 import multer from "multer";
 import path from "path";
-import os from "os";
-import fs from "fs";
 import authMiddleware from "../middleware/auth.js";
-import Abstract from "../models/Abstract.js";
+import { supabase } from "../utils/supabase.js";
 
 const router = express.Router();
 
-// Auto-create local uploads directory if it doesn't exist
-if (!process.env.VERCEL) {
-  const uploadPath = path.join(import.meta.dirname, "../uploads");
-  if (!fs.existsSync(uploadPath)) {
-    fs.mkdirSync(uploadPath, { recursive: true });
-  }
-}
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const uploadPath = process.env.VERCEL ? os.tmpdir() : path.join(import.meta.dirname, "../uploads");
-    cb(null, uploadPath); 
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname);
-  }
-});
+// Memory storage to keep file buffers in memory for direct cloud upload
+const storage = multer.memoryStorage();
 
 const upload = multer({
   storage: storage,
@@ -39,7 +22,7 @@ const upload = multer({
     if (extname && mimetype) {
       return cb(null, true);
     } else {
-      cb(new Error("Yalnız PDF, DOC və ya DOCX faylları yüklənə bilər!"));
+      cb(new Error("Only PDF, DOC or DOCX files can be uploaded!"));
     }
   }
 });
@@ -48,44 +31,91 @@ router.post("/upload", authMiddleware, (req, res) => {
   upload.single("abstract")(req, res, async (err) => {
     if (err instanceof multer.MulterError) {
       if (err.code === "LIMIT_FILE_SIZE") {
-        return res.status(400).json({ message: "Faylın ölçüsü çox böyükdür! Maksimum limit 5MB-dır." });
+        return res.status(400).json({ message: "File size is too large! Maximum limit is 5MB." });
       }
-      return res.status(400).json({ message: `Yükləmə xətası: ${err.message}` });
+      return res.status(400).json({ message: `Upload error: ${err.message}` });
     } else if (err) {
       return res.status(400).json({ message: err.message });
     }
 
-    if (!req.file) return res.status(400).json({ message: "Fayl seçilməyib" });
+    if (!req.file) return res.status(400).json({ message: "No file selected" });
 
     try {
-      const newAbstract = new Abstract({
-        userId: req.user.id,
-        filename: req.file.filename,
-        originalName: req.file.originalname,
-        path: req.file.path
-      });
+      const uniqueFilename = `${Date.now()}-${req.file.originalname}`;
+      const filePath = `${req.user.id}/${uniqueFilename}`;
 
-      await newAbstract.save();
+      // 1. Upload file buffer to Supabase Storage bucket 'abstracts'
+      const { data: uploadData, error: uploadErr } = await supabase.storage
+        .from("abstracts")
+        .upload(filePath, req.file.buffer, {
+          contentType: req.file.mimetype,
+          upsert: true
+        });
+
+      if (uploadErr) {
+        throw new Error(`Storage upload error: ${uploadErr.message}`);
+      }
+
+      // 2. Get public URL of the uploaded file
+      const { data: publicUrlData } = supabase.storage
+        .from("abstracts")
+        .getPublicUrl(filePath);
+
+      const publicUrl = publicUrlData.publicUrl;
+
+      // 3. Insert metadata record into abstracts table
+      const { error: dbErr } = await supabase
+        .from("abstracts")
+        .insert({
+          user_id: req.user.id,
+          filename: uniqueFilename,
+          original_name: req.file.originalname,
+          path: publicUrl
+        });
+
+      if (dbErr) {
+        // Clean up uploaded file if DB insert fails
+        await supabase.storage.from("abstracts").remove([filePath]);
+        throw new Error(`Database insert error: ${dbErr.message}`);
+      }
 
       res.json({
-        message: "Xülasə uğurla yükləndi və məlumat bazasına qeyd edildi",
-        file: req.file.filename,
-        user: req.user.id 
+        message: "Abstract successfully uploaded!",
+        file: uniqueFilename,
+        user: req.user.id,
+        url: publicUrl
       });
-    } catch (dbErr) {
-      console.error("Database save error:", dbErr.message);
-      res.status(500).json({ message: "Fayl məlumatı bazaya yazıla bilmədi" });
+    } catch (uploadErr) {
+      console.error("Supabase upload/save error:", uploadErr.message);
+      res.status(500).json({ message: "Could not save file details to database" });
     }
   });
 });
 
 router.get("/my-abstracts", authMiddleware, async (req, res) => {
   try {
-    const list = await Abstract.find({ userId: req.user.id }).sort({ uploadedAt: -1 });
-    res.json(list);
+    const { data: list, error } = await supabase
+      .from("abstracts")
+      .select("*")
+      .eq("user_id", req.user.id)
+      .order("uploaded_at", { ascending: false });
+
+    if (error) throw error;
+
+    // Map Supabase column names to match the frontend expectations
+    const formattedList = list.map(item => ({
+      id: item.id,
+      userId: item.user_id,
+      filename: item.filename,
+      originalName: item.original_name,
+      path: item.path,
+      uploadedAt: item.uploaded_at
+    }));
+
+    res.json(formattedList);
   } catch (err) {
     console.error("Fetch abstracts error:", err.message);
-    res.status(500).json({ message: "Xülasələri gətirmək mümkün olmadı" });
+    res.status(500).json({ message: "Could not retrieve abstracts" });
   }
 });
 
