@@ -1,5 +1,3 @@
-import image from "../images/cilers logo.png"
-import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
 import { FiLogIn, FiUserPlus } from "react-icons/fi";
@@ -8,11 +6,9 @@ import "./header.css"
 import { useEffect, useState } from "react";
 
 function Header (){
-
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setShowButton(true);
@@ -20,13 +16,10 @@ function Header (){
         setShowButton(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-
   }, []);
 
   const scrollTop = () => {
@@ -36,90 +29,111 @@ function Header (){
     });
   };
 
-    return(
-        <>
-     <div className="HeaderContainer">
+  const navigateAndScroll = (targetId) => {
+    if (window.location.pathname === "/") {
+      if (targetId) {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        scrollTop();
+      }
+    } else {
+      window.location.href = targetId ? `/#${targetId}` : "/";
+    }
+  };
+
+  return (
+    <>
+      <div className="HeaderContainer">
         <div className="HeaderLogo">
-          <h2>CILERS||2026</h2>
-            {/* <img src={image} alt="" /> */}
+          <RouterLink to="/" onClick={(e) => { e.preventDefault(); navigateAndScroll(null); }} className="logo-link">
+            <h2>CILERS||2026</h2>
+          </RouterLink>
         </div>
-       <div className="headerbtnnav">
-         <div className="HeaderNav">
+        <div className="headerbtnnav">
+          <div className="HeaderNav">
             <nav>
-                <ul>
-                <RouterLink to="/" className="navlink">
-                  Home
-                </RouterLink>
-                  
-                       <li className="dropdown">
-        Conference
+              <ul>
+                <li>
+                  <a href="/" onClick={(e) => { e.preventDefault(); navigateAndScroll(null); }} className="navlink">
+                    Home
+                  </a>
+                </li>
+                
+                <li className="dropdown">
+                  <span className="dropdown-trigger">Conference</span>
+                  <div className="dropdownMenu">
+                    <a href="/#speakerkeynote" onClick={(e) => { e.preventDefault(); navigateAndScroll("speakerkeynote"); }}>
+                      Keynote Speakers
+                    </a>
+                    <a href="/#contact" onClick={(e) => { e.preventDefault(); navigateAndScroll("contact"); }}>
+                      Committee
+                    </a>
+                    <a href="/#conferencevenu" onClick={(e) => { e.preventDefault(); navigateAndScroll("conferencevenu"); }}>
+                      Venue
+                    </a>
+                    <a href="/#topics" onClick={(e) => { e.preventDefault(); navigateAndScroll("topics"); }}>
+                      Topics
+                    </a>
+                  </div>
+                </li>
 
-        <div className="dropdownMenu">
-          <ScrollLink to="speakerkeynote" smooth={true} duration={300}>
-            Keynote Speakers
-          </ScrollLink>
+                <li className="dropdown">
+                  <span className="dropdown-trigger">Submission</span>
+                  <div className="dropdownMenu">
+                    <a href="/#guidelines" onClick={(e) => { e.preventDefault(); navigateAndScroll("guidelines"); }}>
+                      Guidelines
+                    </a>
+                    <a href="/#Deadlines" onClick={(e) => { e.preventDefault(); navigateAndScroll("Deadlines"); }}>
+                      Deadlines
+                    </a>
+                  </div>
+                </li>
 
-          <ScrollLink to="contact" smooth={true} duration={200}>
-            Commite
-          </ScrollLink>
+                <li>
+                  <a href="/#participant" onClick={(e) => { e.preventDefault(); navigateAndScroll("participant"); }} className="navlink">
+                    Participate
+                  </a>
+                </li>
 
-          <ScrollLink to="conferencevenu" smooth={true} duration={200}>
-            Venue
-          </ScrollLink>
-          <ScrollLink to="topics" smooth={true} duration={200}>
-                Topics
-          </ScrollLink>
-        </div>
-      </li>
-                    <li className="dropdown">Submission
-                         <div className="dropdownMenu">
-          <ScrollLink to=" Guidlines" smooth={true} duration={200}>
-        Guidlines
-          </ScrollLink>
-
-          <ScrollLink to="Deadlines" smooth={true} duration={200}>
-            Deadlines
-          </ScrollLink>
-
-          
-        </div>
-                    </li>
-                    <ScrollLink to="participant" smooth={true} duraction={200} >Participate</ScrollLink>
-                    <ScrollLink to="contact" smooth={true} duraction={200} >Contact</ScrollLink>
-                    
-                    
-                        
-                </ul>
+                <li>
+                  <a href="/#contact" onClick={(e) => { e.preventDefault(); navigateAndScroll("contact"); }} className="navlink">
+                    Contact
+                  </a>
+                </li>
+              </ul>
             </nav>
+          </div>
+          
+          <div className="HeaderBtn">
+            <SignedOut>
+              <RouterLink to="/login">
+                <button className="navbar-btn login-btn">
+                  <FiLogIn className="btn-icon" /> Login
+                </button>
+              </RouterLink>
+              <RouterLink to="/register">
+                <button className="navbar-btn register-btn">
+                  <FiUserPlus className="btn-icon" /> Register
+                </button>
+              </RouterLink>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+          </div>
         </div>
-       
-        <div className="HeaderBtn">
-          <SignedOut>
-            <RouterLink to="/login">
-              <button className="navbar-btn login-btn">
-                <FiLogIn className="btn-icon" /> Login
-              </button>
-            </RouterLink>
-            <RouterLink to="/register">
-              <button className="navbar-btn register-btn">
-                <FiUserPlus className="btn-icon" /> Register
-              </button>
-            </RouterLink>
-          </SignedOut>
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
-        </div>
-       </div>
-       {
-        showButton && (
+        
+        {showButton && (
           <div className="scrollTop" onClick={scrollTop}>
             <FaArrowUp />
           </div>
-        )
-      }
-     </div>
-        </>
-    )
+        )}
+      </div>
+    </>
+  );
 }
+
 export default Header;

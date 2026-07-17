@@ -7,14 +7,40 @@
   --purple-900: #4c1d95;  
 }
 
-*{
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
+.logo-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-link:hover {
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
 .navlink {
-  color: white;  
-  text-decoration: none;
-  padding: 10px;
+    color: white;  
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navlink:hover {
+    color: var(--purple-300);
 }
 .HeaderContainer {
     display: flex;
@@ -120,52 +146,77 @@
     font-size: 16px;
 }
 
-.HeaderNav a{
+.HeaderNav a {
     text-decoration: none;
 }
-.HeaderNav ul{
+
+.HeaderNav ul {
     display: flex;
     align-items: center;
     gap: 30px;
     list-style: none;
 }
 
-.HeaderNav ul li{
+.HeaderNav ul li {
     position: relative;
     cursor: pointer;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px !important;
 }
 
-.dropdownMenu{
+.dropdown-trigger {
+    color: white;
+    padding: 10px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s;
+}
+
+.dropdown:hover .dropdown-trigger {
+    color: var(--purple-300);
+}
+
+.dropdownMenu {
     position: absolute;
-    top: 30px;
-    left: 0;
-    background-color: white;
-    width: 180px;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #12113a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 200px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-z-index: 999;
+    gap: 8px;
+    z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.dropdown:hover .dropdownMenu{
+.dropdown:hover .dropdownMenu {
     opacity: 1;
     visibility: visible;
+    top: 40px;
 }
 
-.dropdownMenu a{
+.dropdownMenu a {
     text-decoration: none;
-    color: black;
-    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
-.dropdownMenu a:hover{
-    color: purple;
-    padding-left: 5px;
+.dropdownMenu a:hover {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 16px;
 }
 
 .scrollTop{
