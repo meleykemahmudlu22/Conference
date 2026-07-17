@@ -16,12 +16,18 @@
   text-decoration: none;
   padding: 10px;
 }
-.HeaderContainer{
+.HeaderContainer {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 12px 40px;
     align-items: center;
-    background-color: #12113a; 
+    background-color: rgba(18, 17, 58, 0.95); 
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .HeaderLogo img{
@@ -65,26 +71,53 @@
     width: 60%;
 }
 
-.HeaderBtn{
+.HeaderBtn {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
 }
 
-.HeaderBtn button{
+.HeaderBtn .navbar-btn {
     cursor: pointer;
-    width: 150px;
-    padding: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 18px;
     border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.HeaderBtn .login-btn {
+    background-color: transparent;
+    border: 2px solid rgba(147, 51, 234, 0.5);
+    color: white;
+}
+
+.HeaderBtn .login-btn:hover {
+    background-color: rgba(147, 51, 234, 0.1);
+    border-color: #a855f7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.2);
+}
+
+.HeaderBtn .register-btn {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
     border: none;
     color: white;
-    font-size: 20px;
-    background-color: var(--purple-500); 
-    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
 }
 
-.HeaderBtn button:hover{
-   background-color: var(--purple-300); 
-   color: #000; 
+.HeaderBtn .register-btn:hover {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
+}
+
+.HeaderBtn .btn-icon {
+    font-size: 16px;
 }
 
 .HeaderNav a{

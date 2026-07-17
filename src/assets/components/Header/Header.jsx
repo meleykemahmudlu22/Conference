@@ -2,6 +2,7 @@ import image from "../images/cilers logo.png"
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
+import { FiLogIn, FiUserPlus } from "react-icons/fi";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import "./header.css"
 import { useEffect, useState } from "react";
@@ -50,7 +51,7 @@ function Header (){
                   Home
                 </RouterLink>
                   
-                      <li className="dropdown">
+                       <li className="dropdown">
         Conference
 
         <div className="dropdownMenu">
@@ -94,8 +95,16 @@ function Header (){
        
         <div className="HeaderBtn">
           <SignedOut>
-            <RouterLink to="/login">   <button>Login</button></RouterLink>
-            <RouterLink to="/register">  <button>Register</button></RouterLink>
+            <RouterLink to="/login">
+              <button className="navbar-btn login-btn">
+                <FiLogIn className="btn-icon" /> Login
+              </button>
+            </RouterLink>
+            <RouterLink to="/register">
+              <button className="navbar-btn register-btn">
+                <FiUserPlus className="btn-icon" /> Register
+              </button>
+            </RouterLink>
           </SignedOut>
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
