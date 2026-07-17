@@ -1,9 +1,95 @@
 .registercontainer {
-    background: radial-gradient(circle at top, #15182b 0%, #09090f 100%);
+    background-color: #0b0c16;
     min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-card-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+/* Background animated glow blobs */
+.background-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.45;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blob-1 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #4f46e5 0%, rgba(79, 70, 229, 0) 70%);
+    top: -100px;
+    left: -100px;
+    animation: float-blob-1 18s infinite ease-in-out;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #7c3aed 0%, rgba(124, 58, 237, 0) 70%);
+    bottom: -150px;
+    right: -150px;
+    animation: float-blob-2 24s infinite ease-in-out;
+}
+
+.blob-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #2563eb 0%, rgba(37, 99, 235, 0) 70%);
+    top: 25%;
+    left: 45%;
+    animation: float-blob-3 20s infinite ease-in-out;
+}
+
+@keyframes float-blob-1 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(70px, -40px) scale(1.15);
+    }
+    66% {
+        transform: translate(-40px, 60px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+@keyframes float-blob-2 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    50% {
+        transform: translate(-80px, 60px) scale(1.2);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+@keyframes float-blob-3 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(-50px, -70px) scale(0.85);
+    }
+    66% {
+        transform: translate(60px, 40px) scale(1.1);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
 }
