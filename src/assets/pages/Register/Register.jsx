@@ -13,50 +13,17 @@ const Register = () => {
           fallbackRedirectUrl="/"
           appearance={{
             variables: {
-              colorPrimary: "blue",
+              colorPrimary: "#4f46e5",
               colorBackground: "white",
-              colorText: "black",
-              colorTextSecondary: "rgb(100, 100, 100)",
-              borderRadius: "8px",
+              colorText: "#0f172a",
+              colorTextSecondary: "#475569",
+              borderRadius: "12px",
             },
             elements: {
-              cardBox: {
-                width: "400px",
-                maxWidth: "100%",
-              },
               card: {
-                border: "1px solid #ccc",
-                boxShadow: "none",
-                borderRadius: "8px",
-                padding: "25px",
-              },
-              headerTitle: {
-                textAlign: "center",
-                fontSize: "24px",
-                fontWeight: "bold",
-              },
-              formButtonPrimary: {
-                width: "100%",
-                borderRadius: "7px",
-                backgroundColor: "blue",
-                color: "white",
-                padding: "12px",
-                fontSize: "15px",
-              },
-              formFieldInput: {
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "10px",
-                "&:focus": {
-                  borderColor: "#667eea",
-                }
-              },
-              footerActionLink: {
-                color: "blue",
-                textDecoration: "none",
-                "&:hover": {
-                  color: "orange",
-                }
+                boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15)",
+                border: "1px solid rgba(226, 232, 240, 0.8)",
+                padding: "30px",
               }
             }
           }}
