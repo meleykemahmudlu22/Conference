@@ -8,7 +8,7 @@ function Commite  ()  {
     
   const handleCopy = () => {
     navigator.clipboard.writeText("+994501234567");
-    alert("Telefon nömrəsi:+994501234567");
+    alert("Phone number copied: +994501234567");
   };
   return (
     <div>

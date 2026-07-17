@@ -21,14 +21,12 @@ export default function Footer() {
 
      
         <div className="footerBox">
-          <h2>⚗ ISFM Konfransı</h2>
+          <h2>⚗ ISFM Conference</h2>
 
           <p>
-            Dünyanın hər yerindən aparıcı tədqiqatçıları bir
-            araya gətirərək, qabaqcıl kəşfləri bölüşmək və
-            kimya, materialşünaslıq və davamlı
-            texnologiyalar sahəsində yeni əməkdaşlıqlar
-            qurmaq.
+            Bringing together leading researchers from around the world to share 
+            cutting-edge discoveries and foster new collaborations in chemistry, 
+            materials science, and sustainable technologies.
           </p>
 
           <div className="socialIcons">
@@ -42,37 +40,37 @@ export default function Footer() {
 
     
         <div className="footerBox">
-          <h3>Tez Keçidlər</h3>
+          <h3>Quick Links</h3>
 
           <ul>
-            <li>Ev</li>
-            <li>Haqqımızda</li>
-            <li>Komitə</li>
-            <li>Əlaqə</li>
-            <li>Elmi Mövzular</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Committee</li>
+            <li>Contact</li>
+            <li>Scientific Topics</li>
           </ul>
         </div>
 
         <div className="footerBox">
-          <h3>Konfrans Məlumatı</h3>
+          <h3>Conference Info</h3>
 
           <ul>
-            <li>Proqram</li>
-            <li>Dinamiklər</li>
-            <li>Xülasələr</li>
-            <li>Qeydiyyat</li>
-            <li>Məkan</li>
+            <li>Program</li>
+            <li>Speakers</li>
+            <li>Abstracts</li>
+            <li>Registration</li>
+            <li>Venue</li>
           </ul>
         </div>
 
         <div className="footerBox">
-          <h3>Əlaqə Məlumatı</h3>
+          <h3>Contact Info</h3>
 
           <div className="contactItem">
             <FaMapMarkerAlt />
             <span>
-              AZ0101, Xırdalan şəhəri, Həsən
-              Əliyev küç., 120
+              AZ0101, Hasan Aliyev str. 120, 
+              Khirdalan, Azerbaijan
             </span>
           </div>
 
@@ -88,14 +86,14 @@ export default function Footer() {
 
           <div className="contactItem">
             <FaClock />
-            <span>Bazar ertəsi-Cümə: 10:00 - 17:00</span>
+            <span>Monday-Friday: 10:00 - 17:00</span>
           </div>
         </div>
 
       </div>
 
       <div className="footerBottom">
-        © 2026 ISFM Konfransı. Bütün hüquqlar qorunur
+        © 2026 ISFM Conference. All rights reserved
       </div>
 
     </div>

@@ -17,7 +17,7 @@ function KeynoteSpeakers() {
         const { data } = await axios.get("https://6a1ad52fbc2f94475492b2ec.mockapi.io/parabolasite");
         setSpeakers(data);
       } catch (error) {
-        console.error("Speaker məlumatlarını gətirmək mümkün olmadı:", error);
+        console.error("Could not fetch speaker data:", error);
       }
     }
     fetchSpeakers();

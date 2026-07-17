@@ -22,8 +22,8 @@ function SectionOne() {
 
     // Show uploading indicator
     Swal.fire({
-      title: "Yüklənir...",
-      text: "Fayl serverə göndərilir, zəhmət olmasa gözləyin.",
+      title: "Uploading...",
+      text: "Sending file to server, please wait.",
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
@@ -43,20 +43,20 @@ function SectionOne() {
       );
 
       Swal.fire({
-        title: "🎉 Uğurlu!",
-        text: data.message,
+        title: "🎉 Success!",
+        text: "Abstract successfully uploaded!",
         icon: "success",
-        confirmButtonText: "Əla!"
+        confirmButtonText: "Great!"
       });
 
       setFile(null); 
     } catch (err) {
       console.error(err);
       Swal.fire({
-        title: "Xəta!",
-        text: err.response?.data?.message || "Fayl yüklənərkən xəta baş verdi",
+        title: "Error!",
+        text: err.response?.data?.message || "An error occurred while uploading the file",
         icon: "error",
-        confirmButtonText: "Bağla"
+        confirmButtonText: "Close"
       });
       setFile(null);
     }
@@ -67,12 +67,12 @@ function SectionOne() {
     if (selectedFile) {
       setFile(selectedFile);
       Swal.fire({
-        title: "Faylı təsdiqləyin",
-        text: `"${selectedFile.name}" xülasəsini yükləmək istəyirsiniz?`,
+        title: "Confirm File",
+        text: `Do you want to upload the abstract "${selectedFile.name}"?`,
         icon: "question",
         showCancelButton: true,
-        confirmButtonText: "Bəli, yüklə",
-        cancelButtonText: "Xeyr",
+        confirmButtonText: "Yes, Upload",
+        cancelButtonText: "Cancel",
         confirmButtonColor: "#7c3aed"
       }).then(async (result) => {
         if (result.isConfirmed) {
@@ -87,12 +87,12 @@ function SectionOne() {
   const triggerFileInput = () => {
     if (!isSignedIn) {
       Swal.fire({
-        title: "Giriş tələb olunur",
-        text: "Xülasə yükləmək üçün əvvəlcə daxil olmalısınız!",
+        title: "Sign In Required",
+        text: "You must sign in first to upload an abstract!",
         icon: "info",
         showCancelButton: true,
-        confirmButtonText: "Daxil ol",
-        cancelButtonText: "Bağla",
+        confirmButtonText: "Sign In",
+        cancelButtonText: "Close",
         confirmButtonColor: "#7c3aed"
       }).then((result) => {
         if (result.isConfirmed) {
@@ -121,14 +121,10 @@ function SectionOne() {
             <div className="textendone">
               <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
             </div>
-            <hr />
-            <div className="textendone">
-              <h2>"DİL, TƏHSİL VƏ TƏDQİQATDA MÜASİR PROBLEMLƏR"</h2>
-            </div>
             
             <div className="sectionbutton">
               <button onClick={() => window.location.href = "/register"} className="cta-btn register-cta">
-                <FaCalendar /> Qeydiyyat
+                <FaCalendar /> Register
               </button>
               <button onClick={triggerFileInput} className="cta-btn submit-cta">
                 <FaUpload /> Submit Abstract
