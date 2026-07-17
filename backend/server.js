@@ -35,6 +35,18 @@ const limiter = rateLimit({
 });
 app.use("/api", limiter);
 
+// Database connection middleware for Serverless environment
+app.use(async (req, res, next) => {
+  if (mongoose.connection.readyState !== 1) {
+    try {
+      await mongoose.connect(process.env.MONGO_URI);
+    } catch (err) {
+      console.error("MongoDB connection error in middleware:", err.message);
+    }
+  }
+  next();
+});
+
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/abstract", abstractRoutes);
