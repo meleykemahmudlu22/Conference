@@ -26,30 +26,57 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+  fileFilter: (req, file, cb) => {
+    const filetypes = /pdf|docx|doc/;
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    const mimetype = file.mimetype === "application/pdf" || 
+                     file.mimetype === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || 
+                     file.mimetype === "application/msword";
 
-router.post("/upload", authMiddleware, upload.single("abstract"), async (req, res) => {
-  if (!req.file) return res.status(400).send("Fayl seçilməyib");
-
-  try {
-    const newAbstract = new Abstract({
-      userId: req.user.id,
-      filename: req.file.filename,
-      originalName: req.file.originalname,
-      path: req.file.path
-    });
-
-    await newAbstract.save();
-
-    res.json({
-      message: "Xülasə uğurla yükləndi və məlumat bazasına qeyd edildi",
-      file: req.file.filename,
-      user: req.user.id 
-    });
-  } catch (err) {
-    console.error("Database save error:", err.message);
-    res.status(500).json({ message: "Fayl məlumatı bazaya yazıla bilmədi" });
+    if (extname && mimetype) {
+      return cb(null, true);
+    } else {
+      cb(new Error("Yalnız PDF, DOC və ya DOCX faylları yüklənə bilər!"));
+    }
   }
+});
+
+router.post("/upload", authMiddleware, (req, res) => {
+  upload.single("abstract")(req, res, async (err) => {
+    if (err instanceof multer.MulterError) {
+      if (err.code === "LIMIT_FILE_SIZE") {
+        return res.status(400).json({ message: "Faylın ölçüsü çox böyükdür! Maksimum limit 5MB-dır." });
+      }
+      return res.status(400).json({ message: `Yükləmə xətası: ${err.message}` });
+    } else if (err) {
+      return res.status(400).json({ message: err.message });
+    }
+
+    if (!req.file) return res.status(400).json({ message: "Fayl seçilməyib" });
+
+    try {
+      const newAbstract = new Abstract({
+        userId: req.user.id,
+        filename: req.file.filename,
+        originalName: req.file.originalname,
+        path: req.file.path
+      });
+
+      await newAbstract.save();
+
+      res.json({
+        message: "Xülasə uğurla yükləndi və məlumat bazasına qeyd edildi",
+        file: req.file.filename,
+        user: req.user.id 
+      });
+    } catch (dbErr) {
+      console.error("Database save error:", dbErr.message);
+      res.status(500).json({ message: "Fayl məlumatı bazaya yazıla bilmədi" });
+    }
+  });
 });
 
 router.get("/my-abstracts", authMiddleware, async (req, res) => {
