@@ -12,6 +12,7 @@ html, body {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Offset for fixed navbar */
     box-sizing: border-box;
 }
 
@@ -49,8 +50,10 @@ html, body {
     align-items: center;
     background-color: rgba(18, 17, 58, 0.95); 
     backdrop-filter: blur(10px);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -246,4 +249,56 @@ html, body {
 .scrollTop:hover{
     transform: translateY(-5px);
     background-color: #9d4edd;
+}
+
+/* Navbar Responsiveness */
+@media (max-width: 992px) {
+    .HeaderContainer {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 15px;
+        position: relative; /* On mobile, let's keep it static/relative if it is too tall, or fixed if we adjust offsets */
+    }
+    
+    /* When navbar is fixed on mobile, body offset needs to match */
+    html, body {
+        padding-top: 150px; /* More space on mobile since navbar wraps into two rows */
+    }
+    
+    .headerbtnnav {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .HeaderNav {
+        width: 100%;
+    }
+    .HeaderNav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .HeaderBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .HeaderLogo h2 {
+        font-size: 24px;
+    }
+    .HeaderNav ul {
+        gap: 10px;
+    }
+    .HeaderNav ul li {
+        font-size: 14px !important;
+    }
+    .HeaderBtn .navbar-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    html, body {
+        padding-top: 180px;
+    }
 }
