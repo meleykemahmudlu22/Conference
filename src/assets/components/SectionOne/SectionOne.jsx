@@ -7,19 +7,21 @@ import picture from "../images/dokuz eylul.png";
 import Swal from "sweetalert2";
 import { FaFileAlt } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
+
 import { FaCalendar } from "react-icons/fa";
 import { FaUpload } from "react-icons/fa";
+
+import { useAuth } from "@clerk/clerk-react";
 import "./one.css";
 
 function SectionOne() {
   const [file, setFile] = useState(null);
+  const { getToken, isSignedIn } = useAuth();
 
  const handleUpload = async (e) => {
   e.preventDefault();
 
-  // Token yoxlaması
-  const token = localStorage.getItem("token");
-  if (!token) {
+  if (!isSignedIn) {
     Swal.fire({
       title: "Xəta!",
       text: "Fayl yükləmək üçün əvvəlcə qeydiyyatdan keçin!",
@@ -30,6 +32,8 @@ function SectionOne() {
     });
     return;
   }
+
+  const token = await getToken();
 
   if (!file) {
     Swal.fire({
@@ -46,7 +50,7 @@ function SectionOne() {
 
   try {
     const { data } = await axios.post(
-      "http://localhost:5000/api/abstract/upload",
+      "/api/abstract/upload",
       formData,
       {
         headers: {
@@ -106,51 +110,7 @@ function SectionOne() {
            </div>
           </div>
         </div>
-        {/* <div className="download">
-         
-            <form onSubmit={handleUpload} className="dowunloadform">
-              <div className="uploadBtn">
-                <label htmlFor="">
-                  <FaFileAlt />
-                   Choose File
-                    <input
-                type="file"
-                onChange={(e) => {
-                  console.log("Seçilən fayl:", e.target.files[0]); 
-                  setFile(e.target.files[0]);
-                }}
-              />
-                </label>
-               
-              </div>
-              <div className="filebtn">
-                   <button
-              onClick={() =>
-                (window.location.href =
-                  "http://localhost:5000/api/template/download")
-              }
-            >
-                 <FaDownload />
-              Şablonu Yüklə
-           
-            </button>
-              <button type="submit"className="btnUpload">   <FaDownload />Xülasə Yüklə</button>
-             
-              </div>
-             
-             
-            </form>
-        </div> */}
-        {/* <div className="bottomRow">
-           <div className="rightbottumtext">
-          <p>EMAIL: CIER.EDITORIAL@MDU.EDU.AZ</p>
-          <p>TEL: (+994 55) 837-01-38 / (+994 50) 836-93-66</p>
-        </div>
-        <div className="leftbottumtext">
-          <SlLocationPin />
-          <p>Mingachevir, Heydar Aliyev Center</p>
-        </div>
-        </div> */}
+        
        
       </div>
     </div>
