@@ -47,9 +47,11 @@ app.get("/api/health", async (req, res) => {
     const { error } = await supabase.from("abstracts").select("id").limit(1);
     if (!error) {
       dbStatus = "connected";
+    } else {
+      dbStatus = `disconnected: ${error.message}`;
     }
   } catch (err) {
-    console.error("Supabase connectivity check failed:", err.message);
+    dbStatus = `disconnected error: ${err.message}`;
   }
   
   res.json({
