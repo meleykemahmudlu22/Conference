@@ -1,14 +1,14 @@
-const express = require("express");
-const multer = require("multer");
-const path = require("path");
-const os = require("os");
-const authMiddleware = require("../middleware/auth");
+import express from "express";
+import multer from "multer";
+import path from "path";
+import os from "os";
+import authMiddleware from "../middleware/auth.js";
 
 const router = express.Router();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = process.env.VERCEL ? os.tmpdir() : path.join(__dirname, "../uploads");
+    const uploadPath = process.env.VERCEL ? os.tmpdir() : path.join(import.meta.dirname, "../uploads");
     cb(null, uploadPath); 
   },
   filename: (req, file, cb) => {
@@ -27,4 +27,4 @@ router.post("/upload", authMiddleware, upload.single("abstract"), (req, res) => 
   });
 });
 
-module.exports = router;
+export default router;
