@@ -2,6 +2,7 @@ import image from "../images/cilers logo.png"
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import "./header.css"
 import { useEffect, useState } from "react";
 
@@ -92,11 +93,13 @@ function Header (){
         </div>
        
         <div className="HeaderBtn">
-         
-         
-               <RouterLink to="/login">   <button>Login</button></RouterLink>
-               <RouterLink to="/register">  <button>Register</button></RouterLink>
-          
+          <SignedOut>
+            <RouterLink to="/login">   <button>Login</button></RouterLink>
+            <RouterLink to="/register">  <button>Register</button></RouterLink>
+          </SignedOut>
+          <SignedIn>
+            <UserButton afterSignOutUrl="/" />
+          </SignedIn>
         </div>
        </div>
        {

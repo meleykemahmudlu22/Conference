@@ -7,17 +7,17 @@ import picture from "../images/dokuz eylul.png";
 import Swal from "sweetalert2";
 import { FaFileAlt } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
+import { useAuth } from "@clerk/clerk-react";
 import "./one.css";
 
 function SectionOne() {
   const [file, setFile] = useState(null);
+  const { getToken, isSignedIn } = useAuth();
 
  const handleUpload = async (e) => {
   e.preventDefault();
 
-  // Token yoxlaması
-  const token = localStorage.getItem("token");
-  if (!token) {
+  if (!isSignedIn) {
     Swal.fire({
       title: "Xəta!",
       text: "Fayl yükləmək üçün əvvəlcə qeydiyyatdan keçin!",
@@ -28,6 +28,8 @@ function SectionOne() {
     });
     return;
   }
+
+  const token = await getToken();
 
   if (!file) {
     Swal.fire({
