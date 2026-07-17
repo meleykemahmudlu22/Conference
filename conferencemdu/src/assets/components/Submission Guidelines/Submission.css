@@ -1,5 +1,5 @@
 .submissioncontainer{
-    background-color: #1a1950;
+    background-color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,11 +8,12 @@
     padding: 60px 0;
 }
 .GuidelinesBox{
-    background: #292877; 
+    background:  #3e0355; 
   backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
     align-items: center;
     width: 900px;
     padding: 40px 0;
@@ -40,7 +41,7 @@
       
 }
 .GuidelinesBoxText h2{
-    color: white;
+    color: rgb(92, 9, 78);
 }
 .GuidelinesBoxText p{
     color: rgb(80, 132, 245);
@@ -56,18 +57,18 @@
     gap: 20px;
     padding: 10px;
     width: 700px;
-    background-color: rgb(130, 194, 255);
+    background-color: white;
     border: 1px solid   rgb(7, 114, 214);
 }
 .deadline h4{
-    color: rgb(7, 89, 167);
+    color: black;
 
 }
 .important{
-     color: rgb(7, 89, 167);
+     color: black;
 }
 .information p{
-    color: rgb(7, 123, 233);
+    color: black;
 }
 .GuidelinesBoxText p{
 color: #9090b0;
@@ -125,5 +126,21 @@ color: #9090b0;
     gap: 10px;
    width: 710px;
    padding: 10px;
+}
+.downloadbutton {
+width: 80%;
+}
+.downloadbutton button{
+    width:100%;
+    padding: 15px;
+    font-size: 17px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
 }
 

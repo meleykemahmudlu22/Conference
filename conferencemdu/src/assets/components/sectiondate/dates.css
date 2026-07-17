@@ -2,7 +2,7 @@
     display: flex;
     justify-content:space-evenly;
     padding: 60px 0;
-    background-color: #1a1950;
+    background-color: white
 }
 .DatesLeft{
     display: flex;
@@ -36,7 +36,7 @@
     gap: 10px;
 }
 .datestext h3{
-    color: white;
+    color: rgb(58, 4, 40);
 }
 .datestext p{
     color: #9090b0;
@@ -52,6 +52,6 @@
 }
 
 .leftdatestext h2{
-    color: white;
+    color: rgb(71, 5, 44);
     font-size: 40px;
 }

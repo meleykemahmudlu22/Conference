@@ -185,8 +185,30 @@ label {
 .btnUpload:active {
   transform: scale(0.95);
 }
+.sectionbutton{
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
 
-
+.sectionbutton button{
+ width: 200px;
+ color: white;
+ padding: 15px;
+ border-radius: 6px;
+ font-size: 18px;
+ border: 1px solid white;
+ cursor: pointer;
+ background-color: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+.sectionbutton button:hover{
+ 
+  color: #131213;
+}
 @keyframes floatText {
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }

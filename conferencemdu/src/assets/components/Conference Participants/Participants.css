@@ -1,5 +1,5 @@
 .participantscontainer{
-    background-color: #1a1950;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@
     font-size: 30px;
 }
 .participantsicon h2{
-    color: white;
+    color: rgb(59, 6, 61);
 }
 .participantbox h4{
     color: white;
@@ -42,7 +42,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background:#201e61; 
+    background:#3e0355; 
   backdrop-filter: blur(50px); 
  
     border: 1px solid #480f50; 
@@ -53,7 +53,7 @@
 }
 .participantbox:nth-child(1) .participanttexticon,.participantbox:nth-child(1) h2{
     font-size: 40px;
-    color: blueviolet;
+    color: blue;
 }
 .participantbox:nth-child(2) .participanttexticon,.participantbox:nth-child(2) h2{
      font-size: 40px;

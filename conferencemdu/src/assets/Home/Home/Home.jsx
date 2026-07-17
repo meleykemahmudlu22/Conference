@@ -21,9 +21,10 @@ function Home() {
         <>
             <Header/>                           
             <SectionOne />
+             <SectionTwo />
             <SectionFour/>
             <Sectiontree/>
-              {/* <SectionTwo /> */}
+             
              
              < SectionFive />
              < SectionVenue />

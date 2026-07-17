@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color:#1a1950;
+  background-color:white;
 
   padding: 80px 0;
   gap: 40px;
@@ -27,11 +27,11 @@
 }
 
 .OrganizeseCart p:nth-child(3) {
-   color: #9090b0;
+   color: #a890b0;
 }
 
 .OrganizeseCart h2 {
-  color: #ffffff; 
+  color:  #3e0355; 
 }
 
 .OrganizeseCart hr {
@@ -85,7 +85,7 @@
   border-radius: 8px;
   height: 220px;
   width: 220px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+
 }
 
 
@@ -111,7 +111,7 @@
 .cartposter p {
   font-size: 14px;
   margin: 0;
-  color: #9090b0; 
+  color: #b090a9; 
 }
 
 .cartposter p:nth-child(5) {
@@ -121,12 +121,12 @@
 
 
 .carttextborder {
-  border: 1px solid #f07030; 
+ 
   border-radius: 12px;
   padding: 10px;
-   background:#201e61; 
+   background:white; 
   backdrop-filter: blur(50px); 
- 
+   box-shadow: 0 3px 8px rgba(0,0,0,0.5);
     border: 1px solid #480f50; 
 }
 .carttextborder:hover{
@@ -137,5 +137,5 @@ border: 1.5px solid #ee631d;
 }
 
 .carttextborder p {
-  color: #e5e5e5; 
+  color: black; 
 }

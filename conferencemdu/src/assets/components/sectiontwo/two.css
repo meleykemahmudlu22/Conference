@@ -4,12 +4,13 @@
   --purple-300: #c084fc;  
   --purple-500: #9333ea;  
   --purple-700: #6d28d9;  
-  --purple-900: #4c1d95;  
+  --purple-900: #130429;  
 }
 
 
 .sectionTwo{
-   background-color: var(--purple-900);
+   background-color:white;
+  
 
     width: 100%;
     box-sizing: border-box; 
@@ -20,11 +21,11 @@
 
     flex-wrap: wrap;
 
-    gap: 20px;
+    gap: 80px;
 
     padding: 60px 0px;
 
-    border-top: 2px solid rgb(210, 233, 9);
+    /* border-top: 2px solid rgb(210, 233, 9); */
 
     overflow-x: hidden; 
 }
@@ -32,18 +33,18 @@
 
 .sectionnumber{
     border-radius: 10px;
-    border: 1px solid goldenrod;
+    /* border: 1px solid goldenrod; */
 
-    font-size: 20px;
+    font-size: 27px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 20px;
 
-    background-color: white;
+   color:  #3e0355;
 
     width: 260px;
     height: 150px;

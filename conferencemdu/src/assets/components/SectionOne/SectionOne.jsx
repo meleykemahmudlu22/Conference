@@ -7,6 +7,8 @@ import picture from "../images/dokuz eylul.png";
 import Swal from "sweetalert2";
 import { FaFileAlt } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
+import { FaCalendar } from "react-icons/fa";
+import { FaUpload } from "react-icons/fa";
 import "./one.css";
 
 function SectionOne() {
@@ -98,7 +100,10 @@ function SectionOne() {
               <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
             </div>
            
-           
+           <div className="sectionbutton">
+             <button><FaCalendar /> Qeydiyyat </button>
+             <button><FaUpload />Submit</button>
+           </div>
           </div>
         </div>
         {/* <div className="download">

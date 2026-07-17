@@ -1,5 +1,7 @@
+
+
 .deadlinecontainer{
-    background-color: #12113a;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-   background:#201e61; 
+   background: #3e0355; 
   backdrop-filter: blur(50px); 
  
     border: 1px solid #480f50; 
@@ -52,7 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background:#201e61; 
+    background: #3e0355; 
   backdrop-filter: blur(50px); 
  
     border: 1px solid #480f50; 
@@ -64,10 +66,10 @@
     font-size: 20px;
 }
 .deadlineboxcontainerfour h4{
-    color: red;
+    color: rgb(0, 4, 255);
 }
 .deadlineboxcontainerone h4{
-    color: navy;
+    color: orangered;
 }
 .deadlineboxcontainertwo h4{
     color: green;
@@ -79,7 +81,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background:#201e61; 
+    background: #3e0355; 
   backdrop-filter: blur(50px); 
  
     border: 1px solid #480f50; 
@@ -94,7 +96,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background:#201e61; 
+    background: #3e0355; 
   backdrop-filter: blur(50px); 
  
     border: 1px solid #480f50; 
@@ -138,7 +140,7 @@
     font-size: 40px;
 }
 .deadlineiconone{
-    color: navy;
+    color: orangered;
     font-size: 40px;
 }
 .deadlineicontree{
@@ -146,14 +148,14 @@
     font-size: 40px;
 }
 .deadlineiconfour{
-    color: red;
+   color: rgb(0, 4, 255);
     font-size: 30px;
 }
 .boxfullcontainer:nth-child(1) h4{
 color: blueviolet;
 }
 .calendaricon h2{
-    color: white;
+    color: rgb(76, 4, 78);
 }
 .facalendaricon{
     color: #f07030;

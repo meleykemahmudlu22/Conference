@@ -4,6 +4,7 @@ import { FaCircleInfo } from "react-icons/fa6";
 import { LuTableOfContents } from "react-icons/lu";
 import { IoDocumentText } from "react-icons/io5";
 import { CgDanger } from "react-icons/cg";
+import { FaDownload } from "react-icons/fa";
 import "./Submission.css"
 function SubmissionGuidelines  ()  {
   return (
@@ -65,6 +66,9 @@ function SubmissionGuidelines  ()  {
            <div className="note">
                 <p><CgDanger/></p>
                 <p>Note:Abstracts that do not meet these formatting requirements will be returned. The organizing committee reserves the right to edit abstracts for clarity or correctness of English but will consult the author if any significant changes are needed.</p>
+            </div>
+            <div className="downloadbutton">
+              <button><FaDownload />Download Abstract Template</button>
             </div>
         </div>
       </div>

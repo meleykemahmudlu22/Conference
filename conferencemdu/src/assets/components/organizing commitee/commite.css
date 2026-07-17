@@ -1,5 +1,5 @@
 .Commitecontainer{
-    background-color: #12113a;
+    background-color: white;
     padding: 60px 0;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-   background: #1a1950; 
+   background:  #3e0355; 
   backdrop-filter: blur(20px);
     width: 770px;
     padding: 30px;
