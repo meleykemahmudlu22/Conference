@@ -44,7 +44,7 @@ function SectionOne() {
 
   try {
     const { data } = await axios.post(
-      "http://localhost:5000/api/abstract/upload",
+      "/api/abstract/upload",
       formData,
       {
         headers: {
@@ -122,7 +122,7 @@ function SectionOne() {
                    <button
               onClick={() =>
                 (window.location.href =
-                  "http://localhost:5000/api/template/download")
+                  "/api/template/download")
               }
             >
                  <FaDownload />

@@ -1,13 +1,15 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
+const os = require("os");
 const authMiddleware = require("../middleware/auth");
 
 const router = express.Router();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../uploads")); 
+    const uploadPath = process.env.VERCEL ? os.tmpdir() : path.join(__dirname, "../uploads");
+    cb(null, uploadPath); 
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + "-" + file.originalname);
