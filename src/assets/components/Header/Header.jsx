@@ -124,13 +124,13 @@ function Header (){
             </SignedIn>
           </div>
         </div>
-        
-        {showButton && (
-          <div className="scrollTop" onClick={scrollTop}>
-            <FiChevronUp />
-          </div>
-        )}
       </div>
+      
+      {showButton && (
+        <div className="scrollTop" onClick={scrollTop}>
+          <FiChevronUp />
+        </div>
+      )}
     </>
   );
 }
