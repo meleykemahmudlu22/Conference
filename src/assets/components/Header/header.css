@@ -25,24 +25,44 @@ html, body {
 .logo-link {
     color: white;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .logo-link:hover {
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+    text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
 }
 
 .navlink {
     color: white;  
     text-decoration: none;
-    padding: 10px;
+    padding: 8px 0;
+    margin: 0 10px;
     font-family: 'Outfit', 'Inter', sans-serif;
     font-weight: 500;
-    transition: color 0.3s;
+    position: relative;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.navlink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--purple-300);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navlink:hover::after {
+    width: 100%;
 }
 
 .navlink:hover {
     color: var(--purple-300);
 }
+
 .HeaderContainer {
     display: flex;
     justify-content: space-between;
@@ -55,8 +75,9 @@ html, body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
 }
 
 .HeaderLogo img{
@@ -170,11 +191,27 @@ html, body {
 
 .dropdown-trigger {
     color: white;
-    padding: 10px 0;
+    padding: 8px 0;
     display: inline-flex;
     align-items: center;
     gap: 4px;
     transition: color 0.3s;
+    position: relative;
+}
+
+.dropdown-trigger::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--purple-300);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown:hover .dropdown-trigger::after {
+    width: 100%;
 }
 
 .dropdown:hover .dropdown-trigger {
@@ -198,7 +235,7 @@ html, body {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .dropdown:hover .dropdownMenu {
@@ -254,12 +291,11 @@ html, body {
         padding: 12px 20px;
         flex-direction: column;
         gap: 15px;
-        position: relative; /* On mobile, let's keep it static/relative if it is too tall, or fixed if we adjust offsets */
+        position: relative; 
     }
     
-    /* When navbar is fixed on mobile, body offset needs to match */
     html, body {
-        padding-top: 150px; /* More space on mobile since navbar wraps into two rows */
+        padding-top: 150px; 
     }
     
     .headerbtnnav {

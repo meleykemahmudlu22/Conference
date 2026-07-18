@@ -7,47 +7,107 @@
   --purple-900: #241B4E;  
 }
 
-
-.sectionTwo{
-   background-color:white;
-  
-
+.sectionTwo {
+    background: linear-gradient(180deg, #ffffff 0%, #fcfbfe 100%);
     width: 100%;
     box-sizing: border-box; 
-
     display: flex;
     justify-content: center; 
     align-items: center;
-
     flex-wrap: wrap;
-
-    gap: 80px;
-
-    padding: 60px 0px;
-
-    /* border-top: 2px solid rgb(210, 233, 9); */
-
+    gap: 40px;
+    padding: 80px 20px;
     overflow-x: hidden; 
 }
 
-
-.sectionnumber{
-    border-radius: 10px;
-    /* border: 1px solid goldenrod; */
-
-    font-size: 27px;
-
+.sectionnumber {
+    border-radius: 16px;
+    background: white;
+    border: 1px solid rgba(75, 58, 148, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    gap: 20px;
-
-   color:  #3B1E8C;
-
-    width: 260px;
-    height: 150px;
-
+    gap: 12px;
+    width: 250px;
+    height: 160px;
     box-sizing: border-box; 
+    box-shadow: 0 10px 30px rgba(59, 30, 140, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sectionnumber::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #06b6d4, #3B1E8C);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sectionnumber:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(59, 30, 140, 0.12);
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.sectionnumber:hover::before {
+    opacity: 1;
+}
+
+.sectionnumber p:first-child {
+    font-size: 42px;
+    font-weight: 700;
+    color: #3B1E8C;
+    text-shadow: 0 4px 12px rgba(59, 30, 140, 0.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 0;
+}
+
+.sectionnumber:hover p:first-child {
+    transform: scale(1.06);
+    color: #06b6d4;
+}
+
+.sectionnumber p:last-child {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4B3A94;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.sectionnumber:hover p:last-child {
+    color: #241B4E;
+}
+
+@media (max-width: 768px) {
+    .sectionTwo {
+        gap: 20px;
+        padding: 50px 10px;
+    }
+    .sectionnumber {
+        width: 45%;
+        height: 140px;
+    }
+    .sectionnumber p:first-child {
+        font-size: 32px;
+    }
+    .sectionnumber p:last-child {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionnumber {
+        width: 90%;
+    }
 }

@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  padding: 80px 0;
-  gap: 40px;
+  background: linear-gradient(180deg, #ffffff 0%, #fcfbfe 100%);
+  padding: 100px 0;
+  gap: 50px;
 }
 
 .OrganizeseCart {
@@ -15,68 +15,82 @@
   align-items: center;
   gap: 15px;
   text-align: center;
+  padding: 0 20px;
 }
 
-.OrganizeseCart p:nth-child(1) {
+.OrganizeseCart p:first-child {
    color: #06b6d4;
-   font-weight: bold;
+   font-weight: 700;
+   font-size: 14px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
 }
 
 .OrganizeseCart p:nth-child(3) {
-   color: #9090b0;
+   color: #666;
+   font-size: 16px;
+   max-width: 600px;
+   line-height: 1.6;
 }
 
 .OrganizeseCart h2 {
   color: #3B1E8C; 
+  font-size: 38px;
+  font-weight: 700;
 }
 
 .OrganizeseCart hr {
-  width: 40%;
-  height: 2.8px;
+  width: 80px;
+  height: 4px;
   border-radius: 10px;
-  background: linear-gradient(
-    90deg, 
-    #06b6d4,       
-    #3B1E8C,       
-    #4B3A94        
-  );
+  background: #3B1E8C;
   border: none;
+  margin-top: 5px;
 }
 
-.OrganizingCartBottom{
+.OrganizingCartBottom {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.cartboxcommon{
+.cartboxcommon {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .Cartposter {
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 260px;
+  width: 100%;
 }
 
 .cartimag {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .cartimag img {
   object-fit: cover;
-  border-radius: 8px;
-  height: 220px;
-  width: 220px;
+  border-radius: 12px;
+  height: 240px;
+  width: 240px;
+  border: 4px solid white;
+  box-shadow: 0 8px 20px rgba(59, 30, 140, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cartposter {
@@ -88,47 +102,64 @@
 }
 
 .cartposter h2 {
-  font-size: 18px;
-  margin: 0;
+  font-size: 19px;
+  margin: 5px 0;
   color: #241B4E; 
+  font-weight: 600;
 }
 
 .cartposter h2:nth-child(2) {
   color: #06b6d4;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .cartposter p {
-  font-size: 14px;
+  font-size: 13.5px;
   margin: 0;
   color: #666; 
+  line-height: 1.4;
 }
 
 .cartposter p:nth-child(5) {
   color: #3B1E8C; 
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .carttextborder {
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 16px;
+  padding: 24px;
   background: white; 
-  backdrop-filter: blur(50px); 
-  box-shadow: 0 10px 30px rgba(59, 30, 140, 0.08);
-  border: 1px solid rgba(75, 58, 148, 0.15); 
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(59, 30, 140, 0.05);
+  border: 1px solid rgba(75, 58, 148, 0.1); 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 290px;
+  box-sizing: border-box;
 }
 
-.carttextborder:hover{
-  border: 1.5px solid #06b6d4; 
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(6, 182, 212, 0.15);
+.carttextborder:hover {
+  border-color: #06b6d4; 
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.18);
 }
 
-.carttextborder h2 {
-  color: #241B4E;
+.carttextborder:hover .cartimag img {
+  transform: scale(1.04);
+  box-shadow: 0 12px 25px rgba(6, 182, 212, 0.25);
+  border-color: rgba(6, 182, 212, 0.1);
 }
 
-.carttextborder p {
-  color: #555; 
+@media (max-width: 768px) {
+  .organizescontainer {
+    padding: 60px 0;
+  }
+  .OrganizeseCart h2 {
+    font-size: 30px;
+  }
+  .carttextborder {
+    width: 100%;
+    max-width: 320px;
+  }
 }

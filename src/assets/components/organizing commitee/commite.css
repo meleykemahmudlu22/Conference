@@ -1,111 +1,147 @@
-.Commitecontainer {
-    background-color: white;
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Commitebox {
+.organizingcommite {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 40px;
-    background:  #241B4E; 
-    backdrop-filter: blur(20px);
-    width: 770px;
-    max-width: 90%;
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid #4B3A94;
-    box-shadow: 0 10px 30px rgba(36, 27, 78, 0.18);
+    background: linear-gradient(180deg, #fcfbfe 0%, #ffffff 100%);
+    padding: 100px 20px;
+    box-sizing: border-box;
 }
 
-.commiteicon h2 {
+.commitediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.commitecard {
+    background: #241B4E;
+    border: 1px solid rgba(75, 58, 148, 0.25);
+    border-radius: 20px;
+    padding: 45px 35px;
+    width: 85%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 15px 45px rgba(36, 27, 78, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+}
+
+.commitecard:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 25px 60px rgba(6, 182, 212, 0.15);
+}
+
+.commitecard h2 {
     color: white;
-    font-size: 28px;
-    font-weight: 600;
-    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.commitetext {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-}
-
-.commitetext p {
+.commitecard p {
     color: #e9d5ff;
     font-size: 16px;
-    line-height: 1.5;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: center;
 }
 
-.commitebtn {
+.commiterow {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.commitebtn button {
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Email button */
-.commitebtn button:nth-child(1) {
-    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-    color: white;
-}
-
-.commitebtn button:nth-child(1):hover {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(109, 40, 217, 0.4);
-}
-
-/* Call button */
-.commitebtn button:nth-child(2) {
-    background-color: transparent;
-    color: white;
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
-}
-
-.commitebtn button:nth-child(2):hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: white;
-    transform: translateY(-2px);
-}
-
-/* Visit button */
-.commitebtn button:nth-child(3) {
-    background-color: #06b6d4;
-    color: white;
-}
-
-.commitebtn button:nth-child(3):hover {
-    background-color: #0891b2;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
-}
-
-.commitebtn button a {
+.commitedetails {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px 20px;
+    border-radius: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.commitedetails:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(6, 182, 212, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.commiteicon {
+    font-size: 38px;
+    color: #06b6d4;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commitedetails:hover .commiteicon {
+    transform: scale(1.1);
+    color: #c084fc;
+}
+
+.commiteinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.commiteinfo h4 {
     color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.commiteinfo p {
+    color: rgba(233, 213, 255, 0.7);
+    font-size: 13.5px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.commiteinfo a {
+    color: #06b6d4;
     text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.commiteinfo a:hover {
+    color: #c084fc;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .organizingcommite {
+        padding: 60px 10px;
+    }
+    .commitecard {
+        padding: 30px 20px;
+        width: 100%;
+    }
+    .commitecard h2 {
+        font-size: 26px;
+    }
+    .commitedetails {
+        width: 100%;
+        max-width: 320px;
+    }
 }

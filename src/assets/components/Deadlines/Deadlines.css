@@ -1,38 +1,57 @@
-.deadlinecontainer{
-    background-color: white;
+.deadlinecontainer {
+    background: linear-gradient(180deg, #fcfbfe 0%, #ffffff 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 0;
+    padding: 100px 0;
+    box-sizing: border-box;
 }
-.containerbox{
+
+.containerbox {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
+    width: 100%;
 }
-.deadlinetext{
+
+.deadlinetext {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 7px;
+    gap: 12px;
+    text-align: center;
+    padding: 0 20px;
 }
-.calendaricon{
+
+.calendaricon {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     font-size: 30px;
     color: #3B1E8C;
     align-items: center;
 }
-.deadlineparagrap p{
-    font-size: 20px;
-    color: #9090b0;
+
+.calendaricon h2 {
+    color: #3B1E8C;
+    font-size: 38px;
+    font-weight: 700;
 }
-.facalendaricon{
+
+.deadlineparagrap p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.facalendaricon {
     font-size: 35px;
     color: #06b6d4;
 }
+
 .deadlineboxcontainerone,
 .deadlineboxcontainertwo,
 .deadlineboxcontainertree,
@@ -42,37 +61,73 @@
     gap: 15px;
     background: #241B4E; 
     backdrop-filter: blur(50px); 
-    border: 1px solid #4B3A94; 
-    width: 300px;
+    border: 1px solid rgba(75, 58, 148, 0.2); 
+    width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 25px 20px;
-    border-radius: 10px;
+    padding: 35px 25px;
+    border-radius: 16px;
     font-size: 20px;
-    box-shadow: 0 10px 30px rgba(36, 27, 78, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(36, 27, 78, 0.12);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
-.deadlineboxcontainerone:hover,
-.deadlineboxcontainertwo:hover,
-.deadlineboxcontainertree:hover,
-.deadlineboxcontainerfour:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(59, 30, 140, 0.25);
+.deadlineboxcontainerone:hover {
+    transform: translateY(-8px);
     border-color: #06b6d4;
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.25);
 }
 
-.deadlineboxcontainerone h4{
+.deadlineboxcontainertwo:hover {
+    transform: translateY(-8px);
+    border-color: #c084fc;
+    box-shadow: 0 20px 40px rgba(192, 132, 252, 0.25);
+}
+
+.deadlineboxcontainertree:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.25);
+}
+
+.deadlineboxcontainerfour:hover {
+    transform: translateY(-8px);
+    border-color: #f43f5e;
+    box-shadow: 0 20px 40px rgba(244, 63, 94, 0.25);
+}
+
+.deadlineboxcontainerone h4 {
     color: #06b6d4;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.deadlineboxcontainertwo h4{
+
+.deadlineboxcontainertwo h4 {
     color: #c084fc;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.deadlineboxcontainertree h4{
+
+.deadlineboxcontainertree h4 {
     color: #38bdf8;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.deadlineboxcontainerfour h4{
+
+.deadlineboxcontainerfour h4 {
     color: #f43f5e;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .deadlineboxcontainerone h3,
@@ -81,44 +136,79 @@
 .deadlineboxcontainerfour h3 {
     color: white;
     font-weight: 600;
+    font-size: 24px;
+    margin: 5px 0 0;
 }
+
 .deadlineboxcontainerone p,
 .deadlineboxcontainertwo p,
 .deadlineboxcontainertree p,
 .deadlineboxcontainerfour p {
     color: #e9d5ff;
     font-size: 15px;
+    margin: 0;
 }
-.boxfullcontainer{
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
+
+.boxfullcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
 }
-.deadlineiconone{
+
+.deadlineiconone,
+.deadlineicontwo,
+.deadlineicontree,
+.deadlineiconfour {
+    font-size: 40px;
+    transition: transform 0.3s ease;
+}
+
+.deadlineboxcontainerone:hover .deadlineiconone {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.deadlineboxcontainertwo:hover .deadlineicontwo {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.deadlineboxcontainertree:hover .deadlineicontree {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.deadlineboxcontainerfour:hover .deadlineiconfour {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.deadlineiconone {
     color: #06b6d4;
-    font-size: 40px;
 }
-.deadlineicontwo{
+
+.deadlineicontwo {
     color: #c084fc;
-    font-size: 40px;
 }
-.deadlineicontree{
+
+.deadlineicontree {
     color: #38bdf8;
-    font-size: 40px;
 }
-.deadlineiconfour{
+
+.deadlineiconfour {
     color: #f43f5e;
-    font-size: 40px;
-}
-.calendaricon h2{
-    color: #3B1E8C;
 }
 
 @media (max-width: 768px) {
+    .deadlinecontainer {
+        padding: 60px 0;
+    }
+    .calendaricon h2 {
+        font-size: 30px;
+    }
     .boxfullcontainer {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        width: 90%;
         gap: 20px;
     }
 }
