@@ -1,11 +1,8 @@
-
-
 .deadlinecontainer{
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
     align-items: center;
     padding: 60px 0;
 }
@@ -25,7 +22,7 @@
     display: flex;
     gap: 10px;
     font-size: 30px;
-    color: navy;
+    color: #3B1E8C;
     align-items: center;
 }
 .deadlineparagrap p{
@@ -34,129 +31,94 @@
 }
 .facalendaricon{
     font-size: 35px;
+    color: #06b6d4;
 }
-.deadlineboxcontainerone{
+.deadlineboxcontainerone,
+.deadlineboxcontainertwo,
+.deadlineboxcontainertree,
+.deadlineboxcontainerfour {
     display: flex;
     flex-direction: column;
     gap: 15px;
-   background: #3e0355; 
-  backdrop-filter: blur(50px); 
- 
-    border: 1px solid #480f50; 
+    background: #241B4E; 
+    backdrop-filter: blur(50px); 
+    border: 1px solid #4B3A94; 
     width: 300px;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 25px 20px;
     border-radius: 10px;
     font-size: 20px;
+    box-shadow: 0 10px 30px rgba(36, 27, 78, 0.15);
+    transition: all 0.3s ease;
 }
-.deadlineboxcontainertwo{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #3e0355; 
-  backdrop-filter: blur(50px); 
- 
-    border: 1px solid #480f50; 
-    width: 300px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
+
+.deadlineboxcontainerone:hover,
+.deadlineboxcontainertwo:hover,
+.deadlineboxcontainertree:hover,
+.deadlineboxcontainerfour:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(59, 30, 140, 0.25);
+    border-color: #06b6d4;
 }
-.deadlineboxcontainerfour h4{
-    color: rgb(0, 4, 255);
-}
+
 .deadlineboxcontainerone h4{
-    color: orangered;
+    color: #06b6d4;
 }
 .deadlineboxcontainertwo h4{
-    color: green;
+    color: #c084fc;
 }
 .deadlineboxcontainertree h4{
-    color: yellow;
+    color: #38bdf8;
 }
-.deadlineboxcontainertree{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #3e0355; 
-  backdrop-filter: blur(50px); 
- 
-    border: 1px solid #480f50; 
-    width: 300px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
+.deadlineboxcontainerfour h4{
+    color: #f43f5e;
 }
-.deadlineboxcontainerfour{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #3e0355; 
-  backdrop-filter: blur(50px); 
- 
-    border: 1px solid #480f50; 
-    width: 300px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-}
-.deadlineboxcontainerone h3{
+
+.deadlineboxcontainerone h3,
+.deadlineboxcontainertwo h3,
+.deadlineboxcontainertree h3,
+.deadlineboxcontainerfour h3 {
     color: white;
+    font-weight: 600;
 }
-.deadlineboxcontainertwo h3{
-    color: white;
-}
-.deadlineboxcontainertree h3{
-    color: white;
-}
-.deadlineboxcontainerfour h3{
-    color: white;
-}
-.deadlineboxcontainerone p{
-    color:#9090b0;
-}
-.deadlineboxcontainertwo p{
-   color:#9090b0;
-}
-.deadlineboxcontainertree p{
-   color:#9090b0;
-}
-.deadlineboxcontainerfour p{
-   color:#9090b0;
+.deadlineboxcontainerone p,
+.deadlineboxcontainertwo p,
+.deadlineboxcontainertree p,
+.deadlineboxcontainerfour p {
+    color: #e9d5ff;
+    font-size: 15px;
 }
 .boxfullcontainer{
     display: flex;
     gap: 40px;
-}
-.deadlineicontwo{
-    color:green;
-    font-size: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .deadlineiconone{
-    color: orangered;
+    color: #06b6d4;
+    font-size: 40px;
+}
+.deadlineicontwo{
+    color: #c084fc;
     font-size: 40px;
 }
 .deadlineicontree{
-    color: yellow;
+    color: #38bdf8;
     font-size: 40px;
 }
 .deadlineiconfour{
-   color: rgb(0, 4, 255);
-    font-size: 30px;
-}
-.boxfullcontainer:nth-child(1) h4{
-color: blueviolet;
+    color: #f43f5e;
+    font-size: 40px;
 }
 .calendaricon h2{
-    color: rgb(76, 4, 78);
+    color: #3B1E8C;
 }
-.facalendaricon{
-    color: #f07030;
+
+@media (max-width: 768px) {
+    .boxfullcontainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }

@@ -2,33 +2,50 @@
     display: flex;
     justify-content:space-evenly;
     padding: 60px 0;
-    background-color: white
+    background-color: white;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .DatesLeft{
     display: flex;
-   gap: 10px;
+    gap: 15px;
 }
 
 .logodateone{
-  background-color: black;
+    background-color: #3B1E8C;
     color: white;
     padding: 15px;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 .logodatetwo{
-  background-color: green;
+    background-color: #4B3A94;
     color: white;
     padding: 15px;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 .logodatetree{
-  background-color: yellow;
+    background-color: #06b6d4;
     color: white;
     padding: 15px;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 .datestext{
     display: flex;
@@ -36,22 +53,39 @@
     gap: 10px;
 }
 .datestext h3{
-    color: rgb(58, 4, 40);
+    color: #241B4E;
+    font-size: 20px;
+    font-weight: 600;
 }
 .datestext p{
     color: #9090b0;
+    font-size: 16px;
 }
 .leftcontainer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
 }
 .dateimg img{
     border-radius: 20px;
-   box-shadow: 0 8px 25px rgba(204, 101, 4, 0.2);
+    box-shadow: 0 10px 30px rgba(59, 30, 140, 0.15);
+    max-width: 100%;
+    height: auto;
 }
 
 .leftdatestext h2{
-    color: rgb(71, 5, 44);
+    color: #3B1E8C;
     font-size: 40px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .SectionDtes {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .leftdatestext h2 {
+        font-size: 32px;
+    }
 }

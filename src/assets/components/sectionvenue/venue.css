@@ -6,7 +6,7 @@
     gap: 20px;
     padding-top: 30px;
     padding-bottom: 10px;
-    color: #6d28d9; 
+    color: #3B1E8C; 
 }
 
 .venutexticont{
@@ -17,12 +17,12 @@
 
 .venutexticont h2{
     font-size: 35px;
-    color:rgb(65, 2, 61); 
+    color: #241B4E; 
 }
 
 .venuicone{
     font-size: 30px;
-    color: #f07030; 
+    color: #06b6d4; 
 }
 
 .Venuetext hr{
@@ -30,17 +30,17 @@
     height: 2.8px;
     border: none;
     border-radius: 10px;
-     background: linear-gradient(
-  90deg, 
-  rgb(184, 121, 6),       
-  #902ff8,       
-  #4b12a8        
-);
+    background: linear-gradient(
+      90deg, 
+      #06b6d4,       
+      #3B1E8C,       
+      #4B3A94        
+    );
 }
 
 .VenueCartcontainer{
     padding: 70px 0; 
-background-color:white;
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,6 @@ background-color:white;
 }
 
 .VenueCartBox{
-  
     width: 600px;
     max-width: 90%; 
     height: auto;   
@@ -64,19 +63,18 @@ background-color:white;
     flex-direction: column;
     color: #f5f5f5; 
     padding: 30px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(36, 27, 78, 0.18);
     gap: 20px;
     border-radius: 10px;
-    background: #3e0355; 
-  backdrop-filter: blur(50px); 
- 
-    border: 1px solid #480f50; 
+    background: #241B4E; 
+    backdrop-filter: blur(50px); 
+    border: 1px solid #4B3A94; 
 }
 
 .locationbtn button{
     width:350px;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     display: flex;
@@ -84,14 +82,17 @@ background-color:white;
     justify-content: center;
     gap: 7px;
     font-size: 16px;
-    background-color: #f07030;
+    background-color: #3B1E8C;
     color:white;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .locationbtn button:hover{
-    background-color: #f18b57; 
+    background-color: #4B3A94; 
     color: #fff;
+    box-shadow: 0 5px 15px rgba(59, 30, 140, 0.4);
+    transform: translateY(-2px);
 }
 
 .locationmap{
@@ -99,7 +100,7 @@ background-color:white;
     align-items: center;
     gap: 10px;
     font-size: 20px;
-    color:#9090b0;
+    color:#e9d5ff;
 }
 
 .unitext{
@@ -130,5 +131,5 @@ background-color:white;
 
 .unicitylocation{
    font-size: 37px;
-  color: #f07030;
+   color: #06b6d4;
 }

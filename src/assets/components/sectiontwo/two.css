@@ -1,10 +1,10 @@
 :root {
-  --purple-50: #f3e8ff;  
-  --purple-100: #e9d5ff;  
-  --purple-300: #c084fc;  
-  --purple-500: #9333ea;  
-  --purple-700: #6d28d9;  
-  --purple-900: #130429;  
+  --purple-50: #e9d5ff;  
+  --purple-100: #c084fc;  
+  --purple-300: #8b5cf6;  
+  --purple-500: #3B1E8C;  
+  --purple-700: #4B3A94;  
+  --purple-900: #241B4E;  
 }
 
 
@@ -44,7 +44,7 @@
 
     gap: 20px;
 
-   color:  #3e0355;
+   color:  #3B1E8C;
 
     width: 260px;
     height: 150px;

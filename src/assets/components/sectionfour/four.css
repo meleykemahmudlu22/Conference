@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --purple: #f2e8fc;
+  --purple: #e9d5ff;
   --turquoise: #1f065c;
   --gold: #FFD700;
-  --orange: #FF7F50;
+  --orange: #06b6d4;
   --green: #4CAF50;
-  --neutral: #6e056e;
+  --neutral: #3B1E8C;
   --pink: #E91E63;
 }
 
@@ -15,7 +15,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 
 .Cartsection{
      display: flex;
@@ -26,7 +25,6 @@ body {
      gap: 40px;
 }
 
-
 .CartText{
     display: flex;
     flex-direction: column;
@@ -36,7 +34,7 @@ body {
 }
 
 .CartText p:nth-child(1){
-    color: #f07030;
+    color: #06b6d4;
     font-size: 18px;
     font-weight: 500;
 }
@@ -51,7 +49,7 @@ body {
 }
 
 .CartText h2{
-    color: #3e0355;
+    color: #3B1E8C;
     font-size: 34px;
     font-weight: 600;
     text-align: center;
@@ -63,20 +61,18 @@ body {
     border: none;
     border-radius: 10px;
     background: linear-gradient(
-  90deg, 
-  rgb(184, 121, 6),       
-  #902ff8,       
-  #4b12a8        
-);
+      90deg, 
+      #06b6d4,       
+      #3B1E8C,       
+      #4B3A94        
+    );
 }
-
 
 .CartBoxContainer{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 
 .CartBoxTop,
 .CartBoxBottom{
@@ -85,7 +81,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 .CartBox{
     position: relative;
@@ -100,18 +95,15 @@ body {
     overflow: hidden; 
     transition: 0.3s ease;
     color: white;
-    background: #3e0355; 
-  backdrop-filter: blur(10px); 
-    border: 1px solid #480f50; 
+    background: #241B4E; 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(75, 58, 148, 0.25); 
 }
-
-
-
 
 .CartBox:hover{
-    border: 1px solid #e63a2e;
+    border: 1px solid #06b6d4;
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
 }
-
 
 .CartBox::before{
     content: "";
@@ -121,22 +113,19 @@ body {
     height: 3px;
     width: 0%;
     border-radius: 10px;
-   background: linear-gradient(
-  90deg, 
-  rgb(207, 136, 4),       
-  #8525eb,       
-  #4b12a8        
-);
-
+    background: linear-gradient(
+      90deg, 
+      #06b6d4,       
+      #3B1E8C,       
+      #4B3A94        
+    );
     transition: width 0.4s ease;
     z-index: 2; 
 }
 
-
 .CartBox:hover::before{
     width: 100%;
 }
-
 
 .boxnav{
     width: 100%;
@@ -152,17 +141,16 @@ body {
 }
 
 .boxnavone p:nth-child(1){
-    color: #e63a2e;
+    color: #06b6d4;
     font-weight: 500;
     font-size: 14px;
 }
 
 .boxnavone p:nth-child(2){
-    color: #9090b0;
+    color: #e9d5ff;
     font-size: 15px;
     line-height: 1.4;
 }
-
 
 .boxtexttop{
     display: flex;
@@ -172,11 +160,10 @@ body {
 
 .boxtexttop p{
     font-weight: 600;
-   
 }
 
 .boxtexttop p:nth-child(1){
-    color: #e63a2e;
+    color: #06b6d4;
     font-size: 30px;
 }
 

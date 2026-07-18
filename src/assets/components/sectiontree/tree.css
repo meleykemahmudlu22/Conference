@@ -1,10 +1,10 @@
 :root {
-  --purple-50: #f3e8ff;   
-  --purple-100: #e9d5ff;  
-  --purple-300: #c084fc;  
-  --purple-500: #9333ea;  
-  --purple-700: #6d28d9;  
-  --purple-900: #4c1d95;  
+  --purple-50: #e9d5ff;   
+  --purple-100: #c084fc;  
+  --purple-300: #8b5cf6;  
+  --purple-500: #3B1E8C;  
+  --purple-700: #4B3A94;  
+  --purple-900: #241B4E;  
 }
 .sectiontrre{
     display: flex;
@@ -12,7 +12,7 @@
     background-color:white;
   
     height: 140vh;
-    color: #6d28d9; 
+    color: #4B3A94; 
     align-items: center;
     font: 1em sans-serif;
 }
@@ -26,11 +26,12 @@
 
 .Lefttext h2{
     font-size: 47px;
-    color:  #3e0355; 
+    color:  #3B1E8C; 
 }
 
 .Lefttext p:nth-child(1) {
-    color: #f07030;
+    color: #06b6d4;
+    font-weight: 600;
 }
 
 .Lefttext p{
@@ -49,7 +50,7 @@
     height: 4px;
     border-radius: 10px;
     border: none;
-    background-color: #9333ea; 
+    background-color: #3B1E8C; 
 }
 
 .LeftCart{
@@ -62,17 +63,16 @@
     display: flex;
     padding: 30px;
     gap: 15px;
-    border-left: 8px solid #f07030; 
+    border-left: 8px solid #06b6d4; 
     backdrop-filter: blur(15px);
-   background: rgba(80, 3, 116, 0.2); 
-  backdrop-filter: blur(10px); 
+    background: rgba(59, 30, 140, 0.15); 
+    backdrop-filter: blur(10px); 
 }
 
 .lextboxtext{
     display: flex;
     flex-direction: column;
     gap: 10px;
-  
 }
 
 .righttext {
@@ -85,11 +85,12 @@
 .rightbox {
   width: 600px;
   height: 570px;
- background: white; 
+  background: white; 
   backdrop-filter: blur(10px); 
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid #f07030;
+  border: 1px solid #4B3A94;
+  box-shadow: 0 10px 30px rgba(59, 30, 140, 0.08);
 }
 
 .rightboxtext {
@@ -101,7 +102,7 @@
 
 .righttextone {
   width: 30%;
-  color: #f07030; 
+  color: #06b6d4; 
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -117,12 +118,12 @@
 
 .divider {
   height: 1px;
-  background: #f07030;
+  background: rgba(75, 58, 148, 0.15);
   margin: 15px 0;
 }
 
 .highlight {
-  background-color:  #3e0355; 
+  background-color:  #3B1E8C; 
   color: #fff;
   padding: 5px 10px;
   border-radius: 4px;
@@ -132,5 +133,5 @@
   color: white;
 }
 .lextboxtext p:nth-child(2){
-  color: #9090b0;
+  color: #e9d5ff;
 }

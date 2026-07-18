@@ -1,9 +1,9 @@
 .footer{
-
-    background-color: #041235;
+    background-color: #1b143a;
     color: white;
     padding: 70px 100px 20px;
     font-family: sans-serif;
+    border-top: 1px solid rgba(75, 58, 148, 0.2);
 }
 
 .footerContainer{
@@ -21,17 +21,20 @@
 .footerBox h2{
     font-size: 33px;
     margin-bottom: 20px;
+    color: #06b6d4;
+    font-weight: 600;
 }
 
 .footerBox h3{
     font-size: 28px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .footerBox p{
     line-height: 1.8;
     font-size: 20px;
-    color: #d8d8d8;
+    color: #e9d5ff;
     max-width: 420px;
 }
 
@@ -45,10 +48,12 @@
     cursor: pointer;
     transition: 0.3s;
     font-size: 20px;
+    color: #d8d8d8;
 }
 
 .footerBox ul li:hover{
-    color: #7f5cff;
+    color: #06b6d4;
+    padding-left: 5px;
 }
 
 .socialIcons{
@@ -61,10 +66,11 @@
 
 .socialIcons svg{
     transition: 0.3s;
+    color: #e9d5ff;
 }
 
 .socialIcons svg:hover{
-    color: #7f5cff;
+    color: #06b6d4;
     transform: translateY(-3px);
 }
 
@@ -74,19 +80,26 @@
     margin-bottom: 20px;
     line-height: 1.7;
     font-size: 19px;
+    color: #d8d8d8;
 }
 
 .contactItem svg{
     margin-top: 5px;
-    color: white;
+    color: #06b6d4;
     min-width: 20px;
 }
 
 .footerBottom{
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
     margin-top: 50px;
     padding-top: 25px;
     text-align: center;
     font-size: 18px;
-    color: #d8d8d8;
+    color: #e9d5ff;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 20px 20px;
+    }
 }

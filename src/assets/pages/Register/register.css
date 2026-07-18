@@ -1,5 +1,5 @@
 .registercontainer {
-    background-color: #0b0c16;
+    background-color: #1b143a;
     min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
 .blob-1 {
     width: 450px;
     height: 450px;
-    background: radial-gradient(circle, #4f46e5 0%, rgba(79, 70, 229, 0) 70%);
+    background: radial-gradient(circle, #3B1E8C 0%, rgba(59, 30, 140, 0) 70%);
     top: -100px;
     left: -100px;
     animation: float-blob-1 18s infinite ease-in-out;
@@ -37,7 +37,7 @@
 .blob-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #7c3aed 0%, rgba(124, 58, 237, 0) 70%);
+    background: radial-gradient(circle, #4B3A94 0%, rgba(75, 58, 148, 0) 70%);
     bottom: -150px;
     right: -150px;
     animation: float-blob-2 24s infinite ease-in-out;
@@ -46,7 +46,7 @@
 .blob-3 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, #2563eb 0%, rgba(37, 99, 235, 0) 70%);
+    background: radial-gradient(circle, #06b6d4 0%, rgba(6, 182, 212, 0) 70%);
     top: 25%;
     left: 45%;
     animation: float-blob-3 20s infinite ease-in-out;
