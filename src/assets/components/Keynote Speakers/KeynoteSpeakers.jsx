@@ -11,13 +11,36 @@ function KeynoteSpeakers() {
   const itemsPerPage = 4;
 
 
+  const fallbackSpeakers = [
+    { name: "Prof. Dr. Sarah Jenkins", role: "Professor of Applied Linguistics", title: "University of Oxford, UK" },
+    { name: "Assoc. Prof. David Miller", role: "Director of Educational Research", title: "Harvard University, USA" },
+    { name: "Dr. Elena Rostova", role: "Senior Researcher in Cognitive Science", title: "Sorbonne University, France" },
+    { name: "Dr. John Harrison", role: "Dean of Language Studies", title: "University of Melbourne, Australia" },
+    { name: "Prof. Dr. Michael Chang", role: "Lead Investigator in Modern Languages", title: "National University of Singapore" },
+    { name: "Assoc. Prof. Lisa Vance", role: "Educational Psychology Specialist", title: "University of Toronto, Canada" },
+    { name: "Dr. Yusuf Al-Fayed", role: "Lecturer in English Literature", title: "American University of Cairo, Egypt" },
+    { name: "Dr. Anna Lindstrom", role: "Researcher in Theoretical Linguistics", title: "Uppsala University, Sweden" }
+  ];
+
   useEffect(() => {
     async function fetchSpeakers() {
       try {
         const { data } = await axios.get("https://6a1ad52fbc2f94475492b2ec.mockapi.io/parabolasite");
-        setSpeakers(data);
+        const processed = data.map((sp, idx) => {
+          const isInvalidRole = !sp.role || sp.role.includes("Invalid faker method");
+          const isInvalidTitle = !sp.title || sp.title.includes("Invalid faker method");
+          const fallback = fallbackSpeakers[idx % fallbackSpeakers.length];
+          return {
+            ...sp,
+            role: isInvalidRole ? fallback.role : sp.role,
+            title: isInvalidTitle ? fallback.title : sp.title,
+            name: (sp.name && !sp.name.includes("Invalid")) ? sp.name : fallback.name
+          };
+        });
+        setSpeakers(processed);
       } catch (error) {
         console.error("Could not fetch speaker data:", error);
+        setSpeakers(fallbackSpeakers);
       }
     }
     fetchSpeakers();
