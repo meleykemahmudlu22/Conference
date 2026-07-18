@@ -18,9 +18,9 @@ function SectionDates () {
               < BiEdit className='logodateone' />
             </div>
             <div className="datestext">
-                <h3>Abstract Submission Deadline</h3>
+                <h3>Abstract Submission</h3>
                 <p>April 5, 2026</p>
-                <p>Extended deadline available</p>
+                <p>Submission portal closes at midnight</p>
             </div>
         </div>
              <div className="DatesLeft">
@@ -28,9 +28,9 @@ function SectionDates () {
               < FaUserCheck className='logodatetwo' />
             </div>
             <div className="datestext">
-                <h3>Abstract Submission Deadline</h3>
-                <p>April 5, 2026</p>
-                <p>Extended deadline available</p>
+                <h3>Notification of Acceptance</h3>
+                <p>April 25, 2026</p>
+                <p>Acceptance notifications sent via email</p>
             </div>
         </div>
              <div className="DatesLeft">
@@ -38,16 +38,16 @@ function SectionDates () {
               < FaCalendar className='logodatetree' />
             </div>
             <div className="datestext">
-                <h3>Abstract Submission Deadline</h3>
-                <p>April 5, 2026</p>
-                <p>Extended deadline available</p>
+                <h3>Registration Deadline</h3>
+                <p>May 5, 2026</p>
+                <p>Early-bird discount ends on this date</p>
             </div>
         </div>
         </div>
        
         <div className="DatesRight">
             <div className="dateimg">
-                <img src="https://isfm.beu.edu.az/images/conf-date.avif" alt="" />
+                <img src="https://isfm.beu.edu.az/images/conf-date.avif" alt="Conference Dates Illustration" />
             </div>
         </div>
       </div>
