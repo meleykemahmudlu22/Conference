@@ -7,13 +7,23 @@
     box-sizing: border-box;
 }
 
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .Commitebox {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: #241B4E; 
+    background: linear-gradient(-45deg, #1b123a, #241B4E, #3B1E8C, #180d30);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     backdrop-filter: blur(20px);
     width: 770px;
     max-width: 90%;
@@ -22,11 +32,25 @@
     border: 1px solid rgba(75, 58, 148, 0.25);
     box-shadow: 0 15px 45px rgba(36, 27, 78, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.Commitebox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(192, 132, 252, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .Commitebox:hover {
     border-color: #06b6d4;
-    box-shadow: 0 25px 60px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 25px 60px rgba(6, 182, 212, 0.2);
 }
 
 .commiteicon h2 {

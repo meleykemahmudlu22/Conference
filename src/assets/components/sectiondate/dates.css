@@ -15,12 +15,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    flex: 1.2;
+    flex: 1.1;
     min-width: 320px;
 }
 
 .DatesRight {
-    flex: 0.8;
+    flex: 1.1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,33 +57,24 @@
 }
 
 .leftcontainer .DatesLeft:nth-child(3) .dateslogo {
-    background-color: #4B3A94;
-    box-shadow: 0 6px 15px rgba(75, 58, 148, 0.15);
+    background-color: #3B1E8C;
+    box-shadow: 0 6px 15px rgba(59, 30, 140, 0.15);
 }
 
 .leftcontainer .DatesLeft:nth-child(4) .dateslogo {
-    background-color: #06b6d4;
-    box-shadow: 0 6px 15px rgba(6, 182, 212, 0.15);
+    background-color: #3B1E8C;
+    box-shadow: 0 6px 15px rgba(59, 30, 140, 0.15);
 }
 
 /* Hover effects on circle container */
-.leftcontainer .DatesLeft:nth-child(2):hover .dateslogo {
-    transform: scale(1.1) rotate(10deg);
-    background-color: #06b6d4;
-    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
-}
-
-.leftcontainer .DatesLeft:nth-child(3):hover .dateslogo {
-    transform: scale(1.1) rotate(10deg);
-    background-color: #06b6d4;
-    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
-}
-
+.leftcontainer .DatesLeft:nth-child(2):hover .dateslogo,
+.leftcontainer .DatesLeft:nth-child(3):hover .dateslogo,
 .leftcontainer .DatesLeft:nth-child(4):hover .dateslogo {
     transform: scale(1.1) rotate(10deg);
-    background-color: #3B1E8C;
-    box-shadow: 0 8px 20px rgba(59, 30, 140, 0.3);
+    background-color: #06b6d4;
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
 }
+
 
 /* Icon styles inside */
 .logodateone, .logodatetwo, .logodatetree {

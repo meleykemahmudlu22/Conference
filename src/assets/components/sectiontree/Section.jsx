@@ -7,7 +7,7 @@ import "./tree.css"
 function Sectiontree  ()  {
   return (
     <div>
-        <div className="sectiontrre">
+        <div className="sectiontrre" id="about">
             <div className="Leftsection">
                 <div className="Lefttext">
                     <p>About the Conference</p>

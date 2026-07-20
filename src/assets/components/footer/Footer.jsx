@@ -30,11 +30,11 @@ export default function Footer() {
           </p>
 
           <div className="socialIcons">
-            <FaFacebook />
-            <FaTwitter />
-            <FaInstagram />
-            <FaYoutube />
-            <FaLinkedin />
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
           </div>
         </div>
 
@@ -43,11 +43,11 @@ export default function Footer() {
           <h3>Quick Links</h3>
 
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Committee</li>
-            <li>Contact</li>
-            <li>Scientific Topics</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Committee</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#topics">Scientific Topics</a></li>
           </ul>
         </div>
 
@@ -55,11 +55,11 @@ export default function Footer() {
           <h3>Conference Info</h3>
 
           <ul>
-            <li>Program</li>
-            <li>Speakers</li>
-            <li>Abstracts</li>
-            <li>Registration</li>
-            <li>Venue</li>
+            <li><a href="#Deadlines">Program</a></li>
+            <li><a href="#speakerkeynote">Speakers</a></li>
+            <li><a href="#guidelines">Abstracts</a></li>
+            <li><a href="#Deadlines">Registration</a></li>
+            <li><a href="#conferencevenu">Venue</a></li>
           </ul>
         </div>
 
@@ -69,19 +69,28 @@ export default function Footer() {
           <div className="contactItem">
             <FaMapMarkerAlt />
             <span>
-              AZ0101, Hasan Aliyev str. 120, 
-              Khirdalan, Azerbaijan
+              <a 
+                href="https://www.google.com/maps?q=Baku+Engineering+University" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                AZ0101, Hasan Aliyev str. 120, Khirdalan, Azerbaijan
+              </a>
             </span>
           </div>
 
           <div className="contactItem">
             <FaPhoneAlt />
-            <span>+994 (55) 674-71-70</span>
+            <span>
+              <a href="tel:+994556747170">+994 (55) 674-71-70</a>
+            </span>
           </div>
 
           <div className="contactItem">
             <FaEnvelope />
-            <span>isfm@beu.edu.az</span>
+            <span>
+              <a href="mailto:isfm@beu.edu.az">isfm@beu.edu.az</a>
+            </span>
           </div>
 
           <div className="contactItem">

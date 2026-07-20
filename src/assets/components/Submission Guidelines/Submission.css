@@ -1,168 +1,283 @@
-.submissioncontainer{
-    background-color:white;
+.submissioncontainer {
+    background: linear-gradient(180deg, #ffffff 0%, #fcfbfe 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
-    padding: 60px 0;
+    padding: 100px 20px;
+    box-sizing: border-box;
 }
-.GuidelinesBox{
-    background:  #241B4E; 
+
+.GuidelinesBoxText {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+.texticonguidelines {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    gap: 12px;
+    color: #3B1E8C;
+}
+
+.editiconse {
+    font-size: 38px;
+    color: #06b6d4;
+}
+
+.GuidelinesBoxText h2 {
+    color: #3B1E8C;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.GuidelinesBoxText p {
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    max-width: 600px;
+}
+
+.GuidelinesBox {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #1b123a, #241B4E, #3B1E8C, #180d30);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 10px 35px rgba(36, 27, 78, 0.18);
+    box-shadow: 0 15px 45px rgba(36, 27, 78, 0.15);
     align-items: center;
     width: 900px;
-    padding: 40px 0;
-    border:  1px solid #4B3A94;
+    max-width: 100%;
+    padding: 50px;
+    border: 1px solid rgba(75, 58, 148, 0.25);
     gap: 40px;
-    border-radius: 10px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    z-index: 1;
 }
-.texticonguidelines{
+
+.GuidelinesBox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(192, 132, 252, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ImportantInformation {
     display: flex;
-    align-items: center;
-    font-size: 30px;
-    gap: 10px;
-    color: white;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
-.editiconse{
-    font-size: 40px;
+
+.ImportantInformation:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.important {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     color: #06b6d4;
 }
-.GuidelinesBoxText{
+
+.important h2 {
+    color: #06b6d4;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.important svg {
+    font-size: 22px;
+}
+
+.information {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
-.GuidelinesBoxText h2{
-    color: white;
-}
-.GuidelinesBoxText p{
+
+.information p {
     color: #e9d5ff;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
 }
-.important{
+
+.deadline {
+    margin-top: 5px;
+}
+
+.deadline h4 {
+    color: #FFD700;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
+}
+
+.Requirements {
     display: flex;
-    gap: 10px;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.FormatRequirements,
+.ContentRequirements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.FormatRequirements h2,
+.ContentRequirements h2 {
+    color: #06b6d4;
+    display: flex;
+    gap: 12px;
     align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
 }
-.ImportantInformation{
+
+.FormatRequirements h2 svg,
+.ContentRequirements h2 svg {
+    font-size: 22px;
+}
+
+.FormatRequirements nav ul,
+.ContentRequirements nav ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    width: 700px;
-    background-color: white;
-    border: 1px solid #06b6d4;
-    border-radius: 8px;
-}
-.deadline h4{
-    color: black;
-}
-.important{
-     color: black;
-}
-.information p{
-    color: black;
-}
-.GuidelinesBoxText p{
-    color: #e9d5ff;
-}
-.Requirements{
-    display: flex;
-    gap: 60px;
-}
-.FormatRequirements{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.ContentRequirements{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.ContentRequirements nav ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     color: #e9d5ff;
     margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.FormatRequirements nav ul li,
+.ContentRequirements nav ul li {
+    position: relative;
     padding-left: 20px;
+    font-size: 14.5px;
+    line-height: 1.5;
 }
-.FormatRequirements nav ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: #e9d5ff;
-    margin: 0;
-    padding-left: 20px;
-}
-.ContentRequirements h2{
+
+.FormatRequirements nav ul li::before,
+.ContentRequirements nav ul li::before {
+    content: "•";
     color: #06b6d4;
-    display: flex;
-    gap: 20px;
-    align-items: center;
+    position: absolute;
+    left: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    top: -2px;
 }
-.FormatRequirements h2{
-    color: #06b6d4;
+
+.note {
     display: flex;
-    gap: 20px;
-    align-items: center;
-    text-align: left;
-}
-.note{
-    display: flex;
-    background-color: #fef08a;
-    color: #854d0e;
-    gap: 10px;
-    width: 710px;
-    padding: 10px;
-    border-radius: 6px;
+    background: rgba(234, 179, 8, 0.05);
+    border: 1px solid rgba(234, 179, 8, 0.15);
     border-left: 5px solid #eab308;
+    color: #fef08a;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    align-items: flex-start;
 }
+
+.note p:first-child {
+    font-size: 20px;
+    color: #eab308;
+    margin: 0;
+    line-height: 1;
+}
+
+.note p:last-child {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 .downloadbutton {
-    width: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.downloadbutton button{
-    width:100%;
-    padding: 15px;
-    font-size: 17px;
+
+.downloadbutton button {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 30px;
+    font-size: 16px;
     background-color: transparent;
     color: white;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Outfit', 'Inter', sans-serif;
 }
+
 .downloadbutton button:hover {
     background-color: #06b6d4;
     border-color: #06b6d4;
-    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
-    transform: translateY(-2px);
+    color: #160f30;
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+    transform: translateY(-3px);
 }
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 @media (max-width: 992px) {
     .GuidelinesBox {
-        width: 90%;
-        padding: 30px 15px;
+        padding: 35px 25px;
     }
     .Requirements {
         flex-direction: column;
         gap: 30px;
-    }
-    .ImportantInformation {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .note {
-        width: 100%;
-        box-sizing: border-box;
     }
 }

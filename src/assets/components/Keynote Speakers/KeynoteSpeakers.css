@@ -158,6 +158,22 @@
     box-shadow: 0 4px 12px rgba(59, 30, 140, 0.25);
 }
 
+.pagination button.page-nav-btn {
+    background-color: rgba(59, 30, 140, 0.03);
+    border-color: rgba(59, 30, 140, 0.1);
+    font-size: 18px;
+    font-family: monospace, sans-serif;
+}
+
+.pagination button.page-nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.08);
+    transform: none;
+    box-shadow: none;
+}
+
 @media (max-width: 768px) {
     .speakerscontainer {
         padding: 60px 0;

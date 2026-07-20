@@ -47,6 +47,20 @@ function KeynoteSpeakers() {
   }, []);
 
  
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft" || e.key === "<" || e.key === ",") {
+        setCurrentPage(prev => Math.max(1, prev - 1));
+      } else if (e.key === "ArrowRight" || e.key === ">" || e.key === ".") {
+        setCurrentPage(prev => Math.min(totalPages, prev + 1));
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [totalPages]);
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentSpeakers = speakers.slice(indexOfFirstItem, indexOfLastItem);
@@ -89,6 +103,14 @@ function KeynoteSpeakers() {
           </div>
 
           <div className="pagination">
+            <button
+              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+              disabled={currentPage === 1}
+              className="page-nav-btn"
+              title="Previous Page (Left Arrow / <)"
+            >
+              &lt;
+            </button>
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
@@ -98,6 +120,14 @@ function KeynoteSpeakers() {
                 {i + 1}
               </button>
             ))}
+            <button
+              onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+              disabled={currentPage === totalPages}
+              className="page-nav-btn"
+              title="Next Page (Right Arrow / >)"
+            >
+              &gt;
+            </button>
           </div>
         {/* </div> */}
       </div>

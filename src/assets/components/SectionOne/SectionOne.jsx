@@ -106,7 +106,7 @@ function SectionOne() {
 
   return (
     <div>
-      <div className="onesection">
+      <div className="onesection" id="home">
         <div className="OneText">
           <div className="textimg">
             <img src={images} alt="CILERS Logo" />

@@ -110,6 +110,33 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+.contactItem a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.contactItem a:hover {
+    color: #06b6d4;
+    text-decoration: underline;
+}
+
+.footerBox ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.footerBox ul li:hover a {
+    color: #06b6d4;
+}
+
+.socialIcons a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+}
+
 .contactItem svg {
     margin-top: 3px;
     color: #06b6d4;
