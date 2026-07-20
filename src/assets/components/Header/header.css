@@ -295,7 +295,7 @@ html, body {
     }
     
     html, body {
-        padding-top: 150px; 
+        padding-top: 0; 
     }
     
     .headerbtnnav {
@@ -332,6 +332,6 @@ html, body {
         font-size: 13px;
     }
     html, body {
-        padding-top: 180px;
+        padding-top: 0;
     }
 }
