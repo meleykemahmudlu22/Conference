@@ -22,6 +22,11 @@ function KeynoteSpeakers() {
     { name: "Dr. Anna Lindstrom", role: "Researcher in Theoretical Linguistics", title: "Uppsala University, Sweden" }
   ];
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentSpeakers = speakers.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(speakers.length / itemsPerPage);
+
   useEffect(() => {
     async function fetchSpeakers() {
       try {
@@ -60,12 +65,6 @@ function KeynoteSpeakers() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [totalPages]);
-
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentSpeakers = speakers.slice(indexOfFirstItem, indexOfLastItem);
-
-  const totalPages = Math.ceil(speakers.length / itemsPerPage);
 
   return (
     <div>
