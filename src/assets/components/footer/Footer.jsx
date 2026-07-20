@@ -15,7 +15,7 @@ import "./footer.css"
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
 
       <div className="footerContainer">
 
@@ -105,6 +105,6 @@ export default function Footer() {
         © 2026 ISFM Conference. All rights reserved
       </div>
 
-    </div>
+    </footer>
   )
 }

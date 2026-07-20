@@ -85,7 +85,7 @@ function KeynoteSpeakers() {
               <div className="SpeakerInfo" key={index}>
                 <div className="Speakerboximage">
           
-                  <img src={image}  />
+                  <img src={image} alt={sp.name} loading="lazy" />
                 </div>
                 <div className="SpeakerName">
                   <h2>{sp.name}</h2>

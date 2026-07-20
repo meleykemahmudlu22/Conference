@@ -19,6 +19,7 @@ function SectionFive  () {
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?fm=jpg&q=60&w=600&auto=format&fit=crop" 
                 alt="Organizer portrait" 
+                loading="lazy"
               />
             </div>
             <div className="cartposter">
@@ -40,6 +41,7 @@ function SectionFive  () {
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?fm=jpg&q=60&w=600&auto=format&fit=crop" 
                 alt="Organizer portrait" 
+                loading="lazy"
               />
             </div>
             <div className="cartposter">
@@ -61,6 +63,7 @@ function SectionFive  () {
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?fm=jpg&q=60&w=600&auto=format&fit=crop" 
                 alt="Organizer portrait" 
+                loading="lazy"
               />
             </div>
             <div className="cartposter">

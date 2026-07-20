@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 function Header (){
   const [showButton, setShowButton] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,17 +45,28 @@ function Header (){
     }
   };
 
+  const handleDropdownClick = (e, name) => {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      setOpenMobileDropdown(openMobileDropdown === name ? null : name);
+    }
+  };
+
   return (
     <>
       <div className="HeaderContainer">
         <div className="HeaderLogo">
-          <RouterLink to="/" onClick={(e) => { e.preventDefault(); navigateAndScroll(null); setMenuOpen(false); }} className="logo-link">
+          <RouterLink to="/" onClick={(e) => { e.preventDefault(); navigateAndScroll(null); setMenuOpen(false); setOpenMobileDropdown(null); }} className="logo-link">
             <h2>CILERS||2026</h2>
           </RouterLink>
         </div>
 
         {/* Hamburger icon for mobile viewports */}
-        <button className="hamburger-btn" onClick={() => setMenuOpen(!menuOpen)}>
+        <button 
+          className="hamburger-btn" 
+          onClick={() => { setMenuOpen(!menuOpen); setOpenMobileDropdown(null); }}
+          aria-label="Toggle Navigation Menu"
+        >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
@@ -63,49 +75,53 @@ function Header (){
             <nav>
               <ul>
                 <li>
-                  <a href="/" onClick={(e) => { e.preventDefault(); navigateAndScroll(null); setMenuOpen(false); }} className="navlink">
+                  <a href="/" onClick={(e) => { e.preventDefault(); navigateAndScroll(null); setMenuOpen(false); setOpenMobileDropdown(null); }} className="navlink">
                     Home
                   </a>
                 </li>
                 
-                <li className="dropdown">
-                  <span className="dropdown-trigger">Conference</span>
+                <li className={`dropdown ${openMobileDropdown === 'conference' ? 'mobile-expanded' : ''}`}>
+                  <span className="dropdown-trigger" onClick={(e) => handleDropdownClick(e, 'conference')}>
+                    Conference
+                  </span>
                   <div className="dropdownMenu">
-                    <a href="/#speakerkeynote" onClick={(e) => { e.preventDefault(); navigateAndScroll("speakerkeynote"); setMenuOpen(false); }}>
+                    <a href="/#speakerkeynote" onClick={(e) => { e.preventDefault(); navigateAndScroll("speakerkeynote"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Keynote Speakers
                     </a>
-                    <a href="/#contact" onClick={(e) => { e.preventDefault(); navigateAndScroll("contact"); setMenuOpen(false); }}>
+                    <a href="/#contact" onClick={(e) => { e.preventDefault(); navigateAndScroll("contact"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Committee
                     </a>
-                    <a href="/#conferencevenu" onClick={(e) => { e.preventDefault(); navigateAndScroll("conferencevenu"); setMenuOpen(false); }}>
+                    <a href="/#conferencevenu" onClick={(e) => { e.preventDefault(); navigateAndScroll("conferencevenu"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Venue
                     </a>
-                    <a href="/#topics" onClick={(e) => { e.preventDefault(); navigateAndScroll("topics"); setMenuOpen(false); }}>
+                    <a href="/#topics" onClick={(e) => { e.preventDefault(); navigateAndScroll("topics"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Topics
                     </a>
                   </div>
                 </li>
 
-                <li className="dropdown">
-                  <span className="dropdown-trigger">Submission</span>
+                <li className={`dropdown ${openMobileDropdown === 'submission' ? 'mobile-expanded' : ''}`}>
+                  <span className="dropdown-trigger" onClick={(e) => handleDropdownClick(e, 'submission')}>
+                    Submission
+                  </span>
                   <div className="dropdownMenu">
-                    <a href="/#guidelines" onClick={(e) => { e.preventDefault(); navigateAndScroll("guidelines"); setMenuOpen(false); }}>
+                    <a href="/#guidelines" onClick={(e) => { e.preventDefault(); navigateAndScroll("guidelines"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Guidelines
                     </a>
-                    <a href="/#Deadlines" onClick={(e) => { e.preventDefault(); navigateAndScroll("Deadlines"); setMenuOpen(false); }}>
+                    <a href="/#Deadlines" onClick={(e) => { e.preventDefault(); navigateAndScroll("Deadlines"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Deadlines
                     </a>
                   </div>
                 </li>
 
                 <li>
-                  <a href="/#participant" onClick={(e) => { e.preventDefault(); navigateAndScroll("participant"); setMenuOpen(false); }} className="navlink">
+                  <a href="/#participant" onClick={(e) => { e.preventDefault(); navigateAndScroll("participant"); setMenuOpen(false); setOpenMobileDropdown(null); }} className="navlink">
                     Participate
                   </a>
                 </li>
 
                 <li>
-                  <a href="/#contact" onClick={(e) => { e.preventDefault(); navigateAndScroll("contact"); setMenuOpen(false); }} className="navlink">
+                  <a href="/#contact" onClick={(e) => { e.preventDefault(); navigateAndScroll("contact"); setMenuOpen(false); setOpenMobileDropdown(null); }} className="navlink">
                     Contact
                   </a>
                 </li>

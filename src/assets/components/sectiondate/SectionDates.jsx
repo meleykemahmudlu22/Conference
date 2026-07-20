@@ -47,7 +47,7 @@ function SectionDates () {
        
         <div className="DatesRight">
             <div className="dateimg">
-                <img src="https://isfm.beu.edu.az/images/conf-date.avif" alt="Conference Dates Illustration" />
+                <img src="https://isfm.beu.edu.az/images/conf-date.avif" alt="Conference Dates Illustration" loading="lazy" />
             </div>
         </div>
       </div>
