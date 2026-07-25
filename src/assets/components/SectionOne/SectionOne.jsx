@@ -1,11 +1,10 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
-import { SlLocationPin } from "react-icons/sl";
 import images from "../images/cilers logo.png";
 import image from "../images/MDUlogo (2).png";
 import picture from "../images/dokuz eylul.png";
 import Swal from "sweetalert2";
-import { FaCalendar, FaUpload, FaDownload } from "react-icons/fa";
+import { FaUpload, FaDownload } from "react-icons/fa";
 import { useAuth } from "@clerk/clerk-react";
 import "./one.css";
 
@@ -104,24 +103,6 @@ function SectionOne() {
     fileInputRef.current.click();
   };
 
-  const handleRegisterClick = () => {
-    if (isSignedIn) {
-      Swal.fire({
-        toast: true,
-        position: "top",
-        icon: "info",
-        title: "You are already registered and signed in!",
-        showConfirmButton: false,
-        timer: 3500,
-        timerProgressBar: true,
-        background: "#3B1E8C",
-        color: "#ffffff"
-      });
-    } else {
-      window.location.href = "/register";
-    }
-  };
-
   return (
     <div>
       <div className="onesection" id="home">
@@ -145,9 +126,6 @@ function SectionOne() {
             </div>
             
             <div className="sectionbutton">
-              <button onClick={handleRegisterClick} className="cta-btn register-cta">
-                <FaCalendar /> Register
-              </button>
               <button onClick={triggerFileInput} className="cta-btn submit-cta">
                 <FaUpload /> Submit Abstract
               </button>
