@@ -1,57 +1,55 @@
 import React, { useEffect, useState } from 'react';
 import { FaMicrophone } from "react-icons/fa";
-import { FaUniversity } from "react-icons/fa";
-import axios from "axios";
-import image from "../images/rektor.jpeg"
 import "./KeynoteSpeakers.css";
 
+import anarEminovImg from "../../images/anar_eminov.png";
+import mahireHuseynovaImg from "../../images/mahire_huseynova.jpg";
+import recepOztopImg from "../../images/recep_oztop.png";
+import afatAbbasovaImg from "../../images/afat_abbasova.jpg";
+import parvinKarimzadeImg from "../../images/parvin_karimzade.png";
+
 function KeynoteSpeakers() {
-  const [speakers, setSpeakers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
-
-  const fallbackSpeakers = [
-    { name: "Prof. Dr. Sarah Jenkins", role: "Professor of Applied Linguistics", title: "University of Oxford, UK" },
-    { name: "Assoc. Prof. David Miller", role: "Director of Educational Research", title: "Harvard University, USA" },
-    { name: "Dr. Elena Rostova", role: "Senior Researcher in Cognitive Science", title: "Sorbonne University, France" },
-    { name: "Dr. John Harrison", role: "Dean of Language Studies", title: "University of Melbourne, Australia" },
-    { name: "Prof. Dr. Michael Chang", role: "Lead Investigator in Modern Languages", title: "National University of Singapore" },
-    { name: "Assoc. Prof. Lisa Vance", role: "Educational Psychology Specialist", title: "University of Toronto, Canada" },
-    { name: "Dr. Yusuf Al-Fayed", role: "Lecturer in English Literature", title: "American University of Cairo, Egypt" },
-    { name: "Dr. Anna Lindstrom", role: "Researcher in Theoretical Linguistics", title: "Uppsala University, Sweden" }
+  const speakersList = [
+    {
+      name: "Anar EMINOV",
+      role: "Keynote Speaker",
+      title: "Rector of Mingachevir State University",
+      image: anarEminovImg
+    },
+    {
+      name: "Mahire HUSEYNOVA",
+      role: "Keynote Speaker",
+      title: "Vice-Rector for International Relations at Azerbaijan State Pedagogical University",
+      image: mahireHuseynovaImg
+    },
+    {
+      name: "Recep OZTOP",
+      role: "Keynote Speaker",
+      title: "Consul General of the Republic of Türkiye",
+      image: recepOztopImg
+    },
+    {
+      name: "Afat ABBASOVA",
+      role: "Keynote Speaker",
+      title: "Director of the Presidential Library of the Administrative Department of the President of the Republic of Azerbaijan",
+      image: afatAbbasovaImg
+    },
+    {
+      name: "Parvin KARIMZADE",
+      role: "Keynote Speaker",
+      title: "Member of the Milli Majlis (National Assembly) of the Republic of Azerbaijan",
+      image: parvinKarimzadeImg
+    }
   ];
 
+  const totalPages = Math.ceil(speakersList.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentSpeakers = speakers.slice(indexOfFirstItem, indexOfLastItem);
-  const totalPages = Math.ceil(speakers.length / itemsPerPage);
+  const currentSpeakers = speakersList.slice(indexOfFirstItem, indexOfLastItem);
 
-  useEffect(() => {
-    async function fetchSpeakers() {
-      try {
-        const { data } = await axios.get("https://6a1ad52fbc2f94475492b2ec.mockapi.io/parabolasite");
-        const processed = data.map((sp, idx) => {
-          const isInvalidRole = !sp.role || sp.role.includes("Invalid faker method");
-          const isInvalidTitle = !sp.title || sp.title.includes("Invalid faker method");
-          const fallback = fallbackSpeakers[idx % fallbackSpeakers.length];
-          return {
-            ...sp,
-            role: isInvalidRole ? fallback.role : sp.role,
-            title: isInvalidTitle ? fallback.title : sp.title,
-            name: (sp.name && !sp.name.includes("Invalid")) ? sp.name : fallback.name
-          };
-        });
-        setSpeakers(processed);
-      } catch (error) {
-        console.error("Could not fetch speaker data:", error);
-        setSpeakers(fallbackSpeakers);
-      }
-    }
-    fetchSpeakers();
-  }, []);
-
- 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowLeft" || e.key === "<" || e.key === ",") {
@@ -69,38 +67,34 @@ function KeynoteSpeakers() {
   return (
     <div>
       <div id='speakerkeynote' className="speakerscontainer">
-        {/* <div className="SpeakerBox"> */}
-          <div className="speakercontainertext">
-            <div className="Speakerboxtext">
-              <FaMicrophone className='microponeicon'/>
-              <h2>Keynote Speakers</h2>
-            </div>
-            <div className="Speakerparagraph">
-              <p>Distinguished experts and thought leaders presenting cutting-edge research</p>
-            </div>
+        <div className="speakercontainertext">
+          <div className="Speakerboxtext">
+            <FaMicrophone className='microponeicon'/>
+            <h2>Keynote Speakers</h2>
           </div>
+          <div className="Speakerparagraph">
+            <p>Distinguished experts and thought leaders presenting cutting-edge research</p>
+          </div>
+        </div>
 
-          <div className="Speakerinfocontainer">
-            {currentSpeakers.map((sp, index) => (
-              <div className="SpeakerInfo" key={index}>
-                <div className="Speakerboximage">
-          
-                  <img src={image} alt={sp.name} loading="lazy" />
-                </div>
-                <div className="SpeakerName">
-                  <h2>{sp.name}</h2>
-                  
-                  <p>{sp.role}</p>
-                </div>
-                
-                <div className="country">
-                  <p>{sp.title}</p>
-                </div>
-                
+        <div className="Speakerinfocontainer">
+          {currentSpeakers.map((sp, index) => (
+            <div className="SpeakerInfo" key={index}>
+              <div className="Speakerboximage">
+                <img src={sp.image} alt={sp.name} loading="lazy" />
               </div>
-            ))}
-          </div>
+              <div className="SpeakerName">
+                <h2>{sp.name}</h2>
+                <p>{sp.role}</p>
+              </div>
+              <div className="country">
+                <p>{sp.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
+        {totalPages > 1 && (
           <div className="pagination">
             <button
               onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
@@ -128,7 +122,7 @@ function KeynoteSpeakers() {
               &gt;
             </button>
           </div>
-        {/* </div> */}
+        )}
       </div>
     </div>
   );
