@@ -144,7 +144,11 @@ function SectionOne() {
               accept=".pdf,.doc,.docx" 
             />
 
-            <a href="/api/template/download" className="download-template-link">
+            <a 
+              href="/MSU-DEU_International_Scientific_Conference_Abstract_Template.docx" 
+              download="MSU-DEU_International_Scientific_Conference_Abstract_Template.docx" 
+              className="download-template-link"
+            >
               <FaDownload /> Download Abstract Template
             </a>
           </div>
