@@ -7,6 +7,11 @@ import mahireHuseynovaImg from "../../images/mahire_huseynova.jpg";
 import recepOztopImg from "../../images/recep_oztop.png";
 import afatAbbasovaImg from "../../images/afat_abbasova.jpg";
 import parvinKarimzadeImg from "../../images/parvin_karimzade.png";
+import elnaraAkimovaImg from "../../images/elnara_akimova.png";
+import azerTuranImg from "../../images/azer_turan.png";
+import gunayAkbarovaImg from "../../images/gunay_akbarova.png";
+import muratAtaImg from "../../images/murat_ata.png";
+import mayilIsmayilovImg from "../../images/mayil_ismayilov.png";
 
 function KeynoteSpeakers() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,6 +47,36 @@ function KeynoteSpeakers() {
       role: "Keynote Speaker",
       title: "Member of the Milli Majlis (National Assembly) of the Republic of Azerbaijan",
       image: parvinKarimzadeImg
+    },
+    {
+      name: "Elnara AKIMOVA",
+      role: "Keynote Speaker",
+      title: "Member of the Milli Majlis (National Assembly) of the Republic of Azerbaijan",
+      image: elnaraAkimovaImg
+    },
+    {
+      name: "Azer TURAN",
+      role: "Keynote Speaker",
+      title: "Editor-in-Chief of “Ədəbiyyat” Newspaper",
+      image: azerTuranImg
+    },
+    {
+      name: "Gunay AKBAROVA",
+      role: "Keynote Speaker",
+      title: "Secretary of the Public Council under the Ministry of Science and Education of Azerbaijan",
+      image: gunayAkbarovaImg
+    },
+    {
+      name: "Murat ATA",
+      role: "Keynote Speaker",
+      title: "Dokuz Eylul University (Turkiye)",
+      image: muratAtaImg
+    },
+    {
+      name: "Mayıl ISMAYILOV",
+      role: "Keynote Speaker",
+      title: "Associate Professor, Mingachevir State University",
+      image: mayilIsmayilovImg
     }
   ];
 
