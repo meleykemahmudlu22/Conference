@@ -87,21 +87,39 @@ function SectionOne() {
   const triggerFileInput = () => {
     if (!isSignedIn) {
       Swal.fire({
-        title: "Sign In Required",
-        text: "You must sign in first to upload an abstract!",
-        icon: "info",
+        title: "Authentication Required",
+        text: "Please sign in or register first to submit an abstract.",
+        icon: "warning",
         showCancelButton: true,
-        confirmButtonText: "Sign In",
-        cancelButtonText: "Close",
-        confirmButtonColor: "#7c3aed"
+        confirmButtonText: "Sign In / Register",
+        cancelButtonText: "Cancel",
+        confirmButtonColor: "#3B1E8C"
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.href = "/login";
+          window.location.href = "/register";
         }
       });
       return;
     }
     fileInputRef.current.click();
+  };
+
+  const handleRegisterClick = () => {
+    if (isSignedIn) {
+      Swal.fire({
+        toast: true,
+        position: "top",
+        icon: "info",
+        title: "You are already registered and signed in!",
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true,
+        background: "#3B1E8C",
+        color: "#ffffff"
+      });
+    } else {
+      window.location.href = "/register";
+    }
   };
 
   return (
@@ -127,7 +145,7 @@ function SectionOne() {
             </div>
             
             <div className="sectionbutton">
-              <button onClick={() => window.location.href = "/register"} className="cta-btn register-cta">
+              <button onClick={handleRegisterClick} className="cta-btn register-cta">
                 <FaCalendar /> Register
               </button>
               <button onClick={triggerFileInput} className="cta-btn submit-cta">

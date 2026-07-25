@@ -1,9 +1,31 @@
-import React from 'react'
-import { SignUp } from "@clerk/clerk-react"
+import React, { useEffect } from 'react';
+import { SignUp, useAuth } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import Header from '../../components/Header/Header';
-import "./register.css"
+import "./register.css";
 
 const Register = () => {
+  const { isSignedIn } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      Swal.fire({
+        toast: true,
+        position: "top",
+        icon: "info",
+        title: "You are already registered and signed in!",
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true,
+        background: "#3B1E8C",
+        color: "#ffffff"
+      });
+      navigate("/");
+    }
+  }, [isSignedIn, navigate]);
+
   return (
     <div>
       <Header/>
@@ -35,7 +57,7 @@ const Register = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Register;
