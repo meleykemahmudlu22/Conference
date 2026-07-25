@@ -17,6 +17,10 @@ import vusalaAsadovaImg from "../../images/vusala_asadova.jpg";
 import deputyDeanImg from "../../images/deputy_dean.png";
 import vusalaAghabayliImg from "../../images/vusala_aghabayli.jpg";
 import aytanAllahverdiyevaImg from "../../images/aytan_allahverdiyeva.png";
+import nahidaImanovaImg from "../../images/nahida_imanova.png";
+import ibrahimChaparImg from "../../images/ibrahim_chapar.png";
+import azadeMikayilovaImg from "../../images/azade_mikayilova.png";
+import nerminMustafayevaImg from "../../images/nermin_mustafayeva.jpg";
 
 function KeynoteSpeakers() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -112,6 +116,30 @@ function KeynoteSpeakers() {
       role: "Keynote Speaker",
       title: "Associate Professor, Azerbaijan University of Languages",
       image: aytanAllahverdiyevaImg
+    },
+    {
+      name: "Nahida IMANOVA",
+      role: "Keynote Speaker",
+      title: "PhD in Philology, Baku Higher Oil School",
+      image: nahidaImanovaImg
+    },
+    {
+      name: "Ibrahim CHAPAR",
+      role: "Keynote Speaker",
+      title: "Dicle University, Türkiye",
+      image: ibrahimChaparImg
+    },
+    {
+      name: "Azade MIKAYILOVA",
+      role: "Keynote Speaker",
+      title: "PhD in Philology, Academy of Public Administration under the President of the Republic of Azerbaijan",
+      image: azadeMikayilovaImg
+    },
+    {
+      name: "Nermin MUSTAFAYEVA",
+      role: "Keynote Speaker",
+      title: "Azerbaijan University of Languages",
+      image: nerminMustafayevaImg
     }
   ];
 
