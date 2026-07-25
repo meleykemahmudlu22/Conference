@@ -12,6 +12,11 @@ import azerTuranImg from "../../images/azer_turan.png";
 import gunayAkbarovaImg from "../../images/gunay_akbarova.png";
 import muratAtaImg from "../../images/murat_ata.png";
 import mayilIsmayilovImg from "../../images/mayil_ismayilov.png";
+import bahramMammadovImg from "../../images/bahram_mammadov.jpg";
+import vusalaAsadovaImg from "../../images/vusala_asadova.jpg";
+import deputyDeanImg from "../../images/deputy_dean.png";
+import vusalaAghabayliImg from "../../images/vusala_aghabayli.jpg";
+import aytanAllahverdiyevaImg from "../../images/aytan_allahverdiyeva.png";
 
 function KeynoteSpeakers() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -77,6 +82,36 @@ function KeynoteSpeakers() {
       role: "Keynote Speaker",
       title: "Associate Professor, Mingachevir State University",
       image: mayilIsmayilovImg
+    },
+    {
+      name: "Bahram MAMMADOV",
+      role: "Keynote Speaker",
+      title: "PhD in Philology, Azerbaijan State Pedagogical University",
+      image: bahramMammadovImg
+    },
+    {
+      name: "Vusala ASADOVA",
+      role: "Keynote Speaker",
+      title: "Associate Professor, Azerbaijan State Pedagogical University, Baku Eurasian University",
+      image: vusalaAsadovaImg
+    },
+    {
+      name: "Deputy Dean",
+      role: "Keynote Speaker",
+      title: "Deputy Dean for Academic Affairs, Azerbaijan State Pedagogical University",
+      image: deputyDeanImg
+    },
+    {
+      name: "Vusala AGHABAYLI",
+      role: "Keynote Speaker",
+      title: "Head of Department, Professor, Azerbaijan University of Languages",
+      image: vusalaAghabayliImg
+    },
+    {
+      name: "Aytan ALLAHVERDIYEVA",
+      role: "Keynote Speaker",
+      title: "Associate Professor, Azerbaijan University of Languages",
+      image: aytanAllahverdiyevaImg
     }
   ];
 
