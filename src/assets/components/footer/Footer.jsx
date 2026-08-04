@@ -21,21 +21,13 @@ export default function Footer() {
 
      
         <div className="footerBox">
-          <h2>⚗ ISFM Conference</h2>
+          <h2>CILERS 2026</h2>
 
           <p>
-            Bringing together leading researchers from around the world to share 
-            cutting-edge discoveries and foster new collaborations in chemistry, 
-            materials science, and sustainable technologies.
+            Welcome to CILERS 2026 — The International Scientific Conference on "Contemporary Issues in Language, Education, Research, and Sustainability." We are honored to welcome distinguished scholars, researchers, educators, and professionals to this international scientific event dedicated to exchanging knowledge, fostering academic collaboration, and exploring innovative perspectives on contemporary issues in language, education, research, and sustainability.
           </p>
 
-          <div className="socialIcons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          </div>
+         
         </div>
 
     
@@ -70,11 +62,11 @@ export default function Footer() {
             <FaMapMarkerAlt />
             <span>
               <a 
-                href="https://www.google.com/maps?q=Baku+Engineering+University" 
+                href="https://maps.app.goo.gl/KDkSG34JqDM8hKRg7" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                AZ0101, Hasan Aliyev str. 120, Khirdalan, Azerbaijan
+                Q382+6R7, Nəriman Nərimanov St, Mingachevir
               </a>
             </span>
           </div>
@@ -82,14 +74,14 @@ export default function Footer() {
           <div className="contactItem">
             <FaPhoneAlt />
             <span>
-              <a href="tel:+994556747170">+994 (55) 674-71-70</a>
+              <a href="tel:+994556747170">+994 (55) 837 01 38</a>
             </span>
           </div>
 
           <div className="contactItem">
             <FaEnvelope />
             <span>
-              <a href="mailto:isfm@beu.edu.az">isfm@beu.edu.az</a>
+              <a href="mailto:cier.editorial@mdu.edu.az">cier.editorial@mdu.edu.az</a>
             </span>
           </div>
 
@@ -102,7 +94,7 @@ export default function Footer() {
       </div>
 
       <div className="footerBottom">
-        © 2026 ISFM Conference. All rights reserved
+        © 2026 CILERS  Conference. All rights reserved
       </div>
 
     </footer>

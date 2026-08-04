@@ -27,7 +27,7 @@ function Deadlines  ()  {
                < IoDocumentText className='deadlineiconone'/>
                 <h3>Abstract Submission</h3>
                 <p>Deadline</p>
-                <h4>May 1, 2026</h4>
+                <h4>Aprel 5, 2026</h4>
             </div>
             <div className="deadlineboxcontainertwo">
                < FaUserPlus className='deadlineicontwo'  />

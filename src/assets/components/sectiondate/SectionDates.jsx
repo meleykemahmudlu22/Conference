@@ -19,7 +19,7 @@ function SectionDates () {
             </div>
             <div className="datestext">
                 <h3>Abstract Submission</h3>
-                <p>April 5, 2026</p>
+                <p>Aprel 5, 2026</p>
                 <p>Submission portal closes at midnight</p>
             </div>
         </div>
@@ -39,7 +39,7 @@ function SectionDates () {
             </div>
             <div className="datestext">
                 <h3>Registration Deadline</h3>
-                <p>May 5, 2026</p>
+                <p>May 1, 2026</p>
                 <p>Early-bird discount ends on this date</p>
             </div>
         </div>

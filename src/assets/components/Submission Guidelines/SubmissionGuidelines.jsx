@@ -28,7 +28,7 @@ function SubmissionGuidelines() {
               <p>Papers must contain original research information of scientific and/or practical value.</p>
             </div>
             <div className="deadline">
-              <h4>Abstract Deadline: April 5, 2026</h4>
+              <h4>Abstract Deadline: Aprel 5, 2026</h4>
             </div>
           </div>
 

@@ -26,11 +26,11 @@ function SectionVenue (){
               </div>
               <div className="locationmap">
                < FaMapMarkerAlt className="location-marker-icon" />
-               <p>120 Hasan Aliyev str., Khirdalan city AZ0101, Azerbaijan</p>
+               <p>Q382+6R7, Nəriman Nərimanov St, Mingachevir</p>
               </div>
               <div className="locationbtn">
                 <a 
-                  href="https://www.google.com/maps?q=Mingachevir+State+University" 
+                  href="https://maps.app.goo.gl/KDkSG34JqDM8hKRg7" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="map-link-wrapper"

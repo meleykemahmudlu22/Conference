@@ -30,26 +30,8 @@ function Sectiontree  ()  {
                         </div>
                      
                     </div>
-                    <div className="lextcarttext">
-                        <div className="lefttexticon">
-                         <FaGraduationCap />
-                        </div>
-                        <div className="lextboxtext">
-                             <p>Who Can Participate</p>
-                      <p>Academic staff, doctoral students, dissertation candidates, master's students, young researchers, and undergraduate students</p>
-                        </div>
-                     
-                    </div>
-                    <div className="lextcarttext">
-                        <div className="lefttexticon">
-                           <ImBooks />
-                        </div>
-                        <div className="lextboxtext">
-                             <p>Who Can Participate</p>
-                      <p>Academic staff, doctoral students, dissertation candidates, master's students, young researchers, and undergraduate students</p>
-                        </div>
-                     
-                    </div>
+                    
+                   
                    
                 
                 </div>

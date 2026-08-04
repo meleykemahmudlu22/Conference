@@ -118,12 +118,9 @@ function SectionOne() {
           </div>
           <div className="Textend">
             <div className="textendone">
-              <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
+              <h2>“CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, RESEARCH, AND SUSTAINABILITY”</h2>
             </div>
-            <hr />
-            <div className="textendone">
-              <h2>"CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, AND RESEARCH"</h2>
-            </div>
+            
             
             <div className="sectionbutton">
               <button onClick={triggerFileInput} className="cta-btn submit-cta">
