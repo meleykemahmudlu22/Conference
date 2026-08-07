@@ -20,7 +20,10 @@
 .cl-internal-devModeBadge,
 .cl-internal-1fpq5at,
 [class*="devModeBadge"],
-[class*="cl-internal-ph30om"] {
+[class*="cl-internal-ph30om"],
+[class*="footer"] > p:last-child,
+div[class*="footer"] > div:last-child,
+.cl-footer > div:last-child {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
