@@ -15,9 +15,10 @@
     z-index: 10;
 }
 
-/* Hide Clerk Development Mode Badge */
+/* Hide Clerk Development Mode Badge & Footer notice */
 .cl-devModeBadge,
 .cl-internal-devModeBadge,
+.cl-internal-1fpq5at,
 [class*="devModeBadge"],
 [class*="cl-internal-ph30om"] {
     display: none !important;
