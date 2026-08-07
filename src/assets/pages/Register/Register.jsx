@@ -50,6 +50,9 @@ const Register = () => {
                   boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15)",
                   border: "1px solid rgba(226, 232, 240, 0.8)",
                   padding: "30px",
+                },
+                devModeBadge: {
+                  display: "none",
                 }
               }
             }}

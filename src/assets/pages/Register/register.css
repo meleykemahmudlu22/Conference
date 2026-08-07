@@ -15,6 +15,17 @@
     z-index: 10;
 }
 
+/* Hide Clerk Development Mode Badge */
+.cl-devModeBadge,
+.cl-internal-devModeBadge,
+[class*="devModeBadge"],
+[class*="cl-internal-ph30om"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 /* Background animated glow blobs */
 .background-glow {
     position: absolute;
