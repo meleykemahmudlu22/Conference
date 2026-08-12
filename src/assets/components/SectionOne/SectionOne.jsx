@@ -4,7 +4,7 @@ import images from "../images/cilers logo.png";
 import image from "../images/MDUlogo (2).png";
 import picture from "../images/dokuz eylul.png";
 import Swal from "sweetalert2";
-import { FaUpload, FaDownload } from "react-icons/fa";
+import { FaUpload, FaDownload, FaFilePdf } from "react-icons/fa";
 import { useAuth } from "@clerk/clerk-react";
 import "./one.css";
 
@@ -103,6 +103,33 @@ function SectionOne() {
     fileInputRef.current.click();
   };
 
+  const handleProgramDownload = (e) => {
+    if (e) e.preventDefault();
+
+    // Trigger direct browser download of PDF
+    const link = document.createElement("a");
+    link.href = "/Conference_Program_CIER2026.pdf";
+    link.download = "Conference_Program_CIER2026.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Display professional English SweetAlert toast notification
+    Swal.fire({
+      toast: true,
+      position: "top-end",
+      icon: "success",
+      title: "Conference Program Downloaded",
+      text: "The official CIER 2026 conference program has been saved to your device.",
+      showConfirmButton: false,
+      timer: 4000,
+      timerProgressBar: true,
+      background: "#1b143a",
+      color: "#ffffff",
+      iconColor: "#06b6d4"
+    });
+  };
+
   return (
     <div>
       <div className="onesection" id="home">
@@ -121,8 +148,10 @@ function SectionOne() {
               <h2>“CONTEMPORARY ISSUES IN LANGUAGE, EDUCATION, RESEARCH, AND SUSTAINABILITY”</h2>
             </div>
             
-            
             <div className="sectionbutton">
+              <button onClick={handleProgramDownload} className="cta-btn program-cta">
+                <FaFilePdf /> Conference Program
+              </button>
               <button onClick={triggerFileInput} className="cta-btn submit-cta">
                 <FaUpload /> Submit Abstract
               </button>
