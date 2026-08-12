@@ -1,10 +1,12 @@
 import { Link as RouterLink } from "react-router-dom";
 import { FiLogIn, FiUserPlus, FiChevronUp, FiMenu, FiX } from "react-icons/fi";
+import { FaFilePdf } from "react-icons/fa";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
-import "./header.css"
+import Swal from "sweetalert2";
+import "./header.css";
 import { useEffect, useState } from "react";
 
-function Header (){
+function Header() {
   const [showButton, setShowButton] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
@@ -52,6 +54,33 @@ function Header (){
     }
   };
 
+  const handleProgramDownload = (e) => {
+    if (e) e.preventDefault();
+    
+    // Trigger browser direct download of PDF
+    const link = document.createElement("a");
+    link.href = "/Conference_Program_CIER2026.pdf";
+    link.download = "Conference_Program_CIER2026.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Display professional English SweetAlert toast notification
+    Swal.fire({
+      toast: true,
+      position: "top-end",
+      icon: "success",
+      title: "Conference Program Downloaded",
+      text: "The official CIER 2026 conference program has been saved to your device.",
+      showConfirmButton: false,
+      timer: 4000,
+      timerProgressBar: true,
+      background: "#1b143a",
+      color: "#ffffff",
+      iconColor: "#06b6d4"
+    });
+  };
+
   return (
     <>
       <div className="HeaderContainer">
@@ -97,6 +126,9 @@ function Header (){
                     <a href="/#topics" onClick={(e) => { e.preventDefault(); navigateAndScroll("topics"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Topics
                     </a>
+                    <a href="/Conference_Program_CIER2026.pdf" onClick={(e) => { handleProgramDownload(e); setMenuOpen(false); setOpenMobileDropdown(null); }}>
+                      Program PDF
+                    </a>
                   </div>
                 </li>
 
@@ -130,6 +162,10 @@ function Header (){
           </div>
           
           <div className="HeaderBtn">
+            <button onClick={handleProgramDownload} className="navbar-btn program-btn">
+              <FaFilePdf className="btn-icon pdf-icon" /> Conference Program
+            </button>
+
             <SignedOut>
               <RouterLink to="/login" onClick={() => setMenuOpen(false)}>
                 <button className="navbar-btn login-btn">
