@@ -11,6 +11,7 @@ import gulshanImg from "../../images/gulshan_nasirova.jpg";
 import gurbanImg from "../../images/gurban_gurbanzada.png";
 import elnurImg from "../../images/elnur_khalilov.jpg";
 import elchinImg from "../../images/elchin_taghiyev.jpg";
+import gunelImg from "../../images/gunel_karimli.jpg";
 
 function SectionFive() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -76,6 +77,12 @@ function SectionFive() {
       role: "Head of Digital Transformation Department",
       institution: "Mingachevir State University",
       image: elchinImg
+    },
+    {
+      name: "Gunel Karimli",
+      role: "Senior Specialist, Department of Scientific Research and Innovation",
+      institution: "Mingachevir State University",
+      image: gunelImg
     }
   ];
 
@@ -85,7 +92,7 @@ function SectionFive() {
   const currentOrganizers = organizers.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <div className="organizescontainer">
+    <div className="organizescontainer" id="contact">
       <div className="OrganizeseCart">
         <p>Organizing Committee</p>
         <h2>Organizers & Contact</h2>
