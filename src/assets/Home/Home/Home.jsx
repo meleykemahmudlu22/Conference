@@ -30,10 +30,11 @@ function Home() {
              < SectionVenue />
              < SectionDates />
              <Commite/>
+               < KeynoteSpeakers />
              < SubmissionGuidelines/>
              < Deadlines />
              < ConferenceParticipants />
-             < KeynoteSpeakers />
+           
              <Footer/>
         </>
     )
