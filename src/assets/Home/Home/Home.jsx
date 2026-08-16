@@ -5,13 +5,13 @@ import SectionTwo from '../../../assets/components/sectiontwo/SectionTwo'
 import  Sectiontree  from "../../../assets/components/sectiontree/Section";
 import  SectionFour  from "../../../assets/components/sectionfour/SectionFour";
 import SectionFive from "../../../assets/components/sectionfive/SectionFive";
+import KeynoteSpeakers from "../../../assets/components/Keynote Speakers/KeynoteSpeakers";
 import SectionVenue from "../../../assets/components/sectionvenue/SectionVenue";
 import SectionDates from "../../../assets/components/sectiondate/SectionDates";
 import Commite from "../../../assets/components/organizing commitee/Commite";
 import SubmissionGuidelines from "../../../assets/components/Submission Guidelines/SubmissionGuidelines";
 import Deadlines from "../../../assets/components/Deadlines/Deadlines";
 import ConferenceParticipants from "../../../assets/components/Conference Participants/ConferenceParticipants";
-import KeynoteSpeakers from "../../../assets/components/Keynote Speakers/KeynoteSpeakers";
 import Footer from '../../components/footer/Footer';
 
 
@@ -24,13 +24,11 @@ function Home() {
              <SectionTwo />
             <SectionFour/>
             <Sectiontree/>
-             
-             
              < SectionFive />
+             < KeynoteSpeakers />
              < SectionVenue />
              < SectionDates />
              <Commite/>
-               < KeynoteSpeakers />
              < SubmissionGuidelines/>
              < Deadlines />
              < ConferenceParticipants />
