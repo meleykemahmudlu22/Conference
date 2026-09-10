@@ -1,4 +1,4 @@
-import { Link as RouterLink } from "react-router-dom";
+import { Link, Link as RouterLink } from "react-router-dom";
 import { FiLogIn, FiUserPlus, FiChevronUp, FiMenu, FiX } from "react-icons/fi";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import "./header.css";
@@ -97,6 +97,8 @@ function Header() {
                     <a href="/#topics" onClick={(e) => { e.preventDefault(); navigateAndScroll("topics"); setMenuOpen(false); setOpenMobileDropdown(null); }}>
                       Topics
                     </a>
+                    <Link to="/archive">Archive</Link>
+                    
                   </div>
                 </li>
 

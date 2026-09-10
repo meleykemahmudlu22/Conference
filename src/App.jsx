@@ -16,6 +16,7 @@ import {  Routes, Route } from "react-router-dom";
 import Home from "./assets/Home/Home/Home";
 import Register from "./assets/pages/Register/Register";
 import Login from "./assets/pages/Login/Login";
+import ConferenceMaterial from "./assets/components/archive/Arcihive";
 
 
 function App(){
@@ -25,6 +26,7 @@ function App(){
       <Route path="/" element={<Home/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/archive" element={<ConferenceMaterial/>}/>
     </Routes>
    
     
