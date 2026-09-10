@@ -13,7 +13,7 @@ function ConferenceMaterial() {
         <div className="title">
           <div className="pdf-icon">PDF</div>
 
-          <h2>CILERS 2026 Conference Material</h2>
+          <h2>CILERS Conference Proceedings 2026</h2>
         </div>
       </div>
 
